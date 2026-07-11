@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_2_5"
+    app:shape_radius="@dimen/dp_5"
+    app:shape_solidColor="@color/color_36343A">
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1.2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="1:1.2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/RadiusStyle_5" />
+
+
+        <com.hjq.shape.view.ShapeView
+            app:layout_constraintTop_toTopOf="@+id/iv_image"
+            app:layout_constraintStart_toStartOf="@+id/iv_image"
+            app:layout_constraintEnd_toEndOf="@+id/iv_image"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_image"
+            android:id="@+id/sv_cover"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:shape_radius="@dimen/dp_5"
+            app:shape_solidColor="@color/white"
+            android:alpha="0.5"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:padding="@dimen/dp_5"
+            android:visibility="gone"
+            android:src="@drawable/iv_photo_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:src="@drawable/iv_add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv_error"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_36"
+            android:visibility="gone"
+            android:background="@drawable/iv_upload_error"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.chat.lib_common.widget.LoadImageView
+            android:id="@+id/iv_load"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:src="@drawable/iv_message_load"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+
+    <com.hjq.shape.view.ShapeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:shape_radius="@dimen/dp_4"
+        app:shape_solidColor="@color/color_FF2E00"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        android:text="Violation"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_4"
+        android:paddingHorizontal="@dimen/dp_5"
+        android:paddingVertical="@dimen/dp_2"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/iv_image"
+        app:layout_constraintStart_toStartOf="@+id/iv_image"
+        android:id="@+id/stv_send_status"/>
+
+</com.hjq.shape.layout.ShapeConstraintLayout>

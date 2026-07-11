@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_30"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="@dimen/dp_13"
+        android:id="@+id/iv_image"/>
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/stv_message_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minWidth="@dimen/dp_18"
+        android:minHeight="@dimen/dp_18"
+        android:text="9"
+        android:visibility="gone"
+        app:shape_strokeSize="@dimen/dp_1"
+        app:shape_strokeColor="@color/white"
+        android:paddingHorizontal="@dimen/dp_2"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_11"
+        android:layout_marginStart="-15dp"
+        android:layout_marginTop="-5dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_image"
+        app:layout_constraintTop_toTopOf="@+id/iv_image"
+        app:shape_radius="@dimen/dp_10"
+        app:shape_solidColor="@color/color_E70614" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

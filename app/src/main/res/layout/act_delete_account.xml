@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appColor"
+    android:orientation="vertical">
+
+    <com.chat.jolt.widget.MToolBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:title="Delete" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="🔄  Data Retention"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_15"
+                android:lineSpacingExtra="@dimen/dp_20"
+                android:text="Your data is retained for 30 days after account deletion. After this period, it’s permanently deleted or anonymized in line with our data retention policy."
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/sp_14" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="♻️ Account Reactivation"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_15"
+                android:lineSpacingExtra="@dimen/dp_20"
+                android:text="Log in within 30 days of deletion to reactivate and restore your account."
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/sp_14" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/stv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_5"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_13"
+            android:text="Delete account"
+            android:textColor="@color/color_F5F5F5"
+            android:textSize="@dimen/sp_18"
+            app:shape_radius="@dimen/dp_29"
+            app:shape_solidColor="@color/color_EAA82B"
+            app:shape_solidDisabledColor="@color/color_C5C5C5"
+            app:shape_solidPressedColor="@color/pressed_color_light" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_12">
+
+            <LinearLayout
+                android:id="@+id/ll_check"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/dp_6">
+
+                <CheckBox
+                    android:id="@+id/cb_check"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/selector_check"
+                    android:button="@null"
+                    android:clickable="false"
+                    android:checked="false" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I have read the above content."
+                android:textColor="@color/color_999999"
+                android:textSize="@dimen/sp_12" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

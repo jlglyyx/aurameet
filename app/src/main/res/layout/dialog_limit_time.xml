@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/dp_100"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iv_limit_time_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.hjq.shape.view.ShapeView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_350"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:shape_solidGradientCenterColor="@color/color_131117"
+        app:shape_solidGradientEndColor="@color/transparent"
+        app:shape_solidGradientOrientation="bottomToTop"
+        app:shape_solidGradientStartColor="@color/color_131117" />
+
+    <ImageView
+        android:id="@+id/iv_limit_time_0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:src="@drawable/iv_limit_time_0"
+        app:layout_constraintBottom_toTopOf="@+id/ll_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_10"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/cl_price">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="Ends in"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center"
+            android:text="00"
+            android:id="@+id/tv_hour"
+            android:textColor="@color/color_151515"
+            android:textSize="@dimen/sp_23"
+            android:textStyle="bold"
+            app:shape_radius="@dimen/dp_5"
+            app:shape_solidColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_11"
+            android:text=":"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_30"
+            android:textStyle="bold" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center"
+            android:text="00"
+            android:id="@+id/tv_minute"
+            android:textColor="@color/color_151515"
+            android:textSize="@dimen/sp_23"
+            android:textStyle="bold"
+            app:shape_radius="@dimen/dp_5"
+            app:shape_solidColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_11"
+            android:text=":"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_30"
+            android:textStyle="bold" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center"
+            android:text="00"
+            android:id="@+id/tv_second"
+            android:textColor="@color/color_151515"
+            android:textSize="@dimen/sp_23"
+            android:textStyle="bold"
+            app:shape_radius="@dimen/dp_5"
+            app:shape_solidColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_37"
+        android:paddingVertical="@dimen/dp_8"
+        app:layout_constraintBottom_toTopOf="@+id/stv_confirm">
+
+        <ImageView
+            android:id="@+id/iv_limit_time_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/iv_limit_time_1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:fontFamily="@font/arial_black"
+            android:text="$9.99"
+            android:textColor="@color/color_712C08"
+            android:textSize="@dimen/sp_26"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.4"
+            app:layout_constraintEnd_toEndOf="@+id/view_line"
+            app:layout_constraintStart_toStartOf="@+id/iv_limit_time_1"
+            app:layout_constraintTop_toTopOf="@+id/iv_limit_time_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:fontFamily="@font/arial_black"
+            android:text="1 Week"
+            android:id="@+id/tv_name"
+            android:textColor="@color/color_712C08"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/tv_price"
+            app:layout_constraintStart_toStartOf="@+id/tv_price"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+        <com.hjq.shape.view.ShapeView
+            android:id="@+id/view_line"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/dp_24"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_limit_time_1"
+            app:layout_constraintEnd_toEndOf="@+id/iv_limit_time_1"
+            app:layout_constraintStart_toStartOf="@+id/iv_limit_time_1"
+            app:layout_constraintTop_toTopOf="@+id/iv_limit_time_1"
+            app:shape_solidGradientCenterColor="@color/color_9E846C"
+            app:shape_solidGradientEndColor="@color/transparent"
+            app:shape_solidGradientOrientation="topToBottom"
+            app:shape_solidGradientStartColor="@color/transparent" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:text="instead of\n$0 per week"
+            android:textColor="@color/color_897969"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:id="@+id/tv_desc"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_limit_time_1"
+            app:layout_constraintEnd_toEndOf="@+id/iv_limit_time_1"
+            app:layout_constraintStart_toStartOf="@+id/view_line"
+            app:layout_constraintTop_toTopOf="@+id/iv_limit_time_1" />
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:shape_radiusInTopLeft="@dimen/dp_8"
+            app:shape_radiusInTopRight="@dimen/dp_8"
+            app:shape_radiusInBottomRight="@dimen/dp_8"
+            android:text="Jolt Premium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:fontFamily="@font/arial_black"
+            android:paddingHorizontal="@dimen/dp_9"
+            android:paddingVertical="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_5"
+            app:shape_strokeColor="@color/color_FFE1C8"
+            app:shape_strokeSize="@dimen/dp_1"
+            app:layout_constraintStart_toStartOf="@+id/iv_limit_time_1"
+            app:layout_constraintTop_toTopOf="@+id/iv_limit_time_1"
+            app:shape_solidGradientEndColor="@color/color_F09536"
+            app:shape_solidGradientOrientation="startToEnd"
+            app:shape_solidGradientStartColor="@color/color_FFBB69" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/stv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dp_14"
+        android:text="Purchase Now (0.33/Day)"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:shape_radius="@dimen/dp_25"
+        app:shape_solidColor="@color/color_button"
+        app:shape_solidPressedColor="@color/pressed_color_light" />
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:orientation="vertical"
+        android:id="@+id/ll_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/iv_close_wlm" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

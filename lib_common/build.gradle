@@ -1,0 +1,119 @@
+plugins {
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.google.services)
+}
+
+android {
+    namespace 'com.chat.lib_common'
+    compileSdk {
+        version = release(35)
+    }
+
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+
+    defaultConfig {
+        minSdk 24
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+    api libs.androidx.core.ktx
+    api libs.androidx.appcompat
+    api libs.material
+    api libs.androidx.activity
+    api libs.androidx.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+
+    api libs.androidx.media3.exoplayer
+    api libs.androidx.media3.ui
+    api libs.androidx.media3.common
+    api libs.androidx.media3.dash
+
+    api libs.androidx.lifecycle.viewmodel.ktx
+    api libs.androidx.lifecycle.runtime.ktx
+    api libs.androidx.lifecycle.livedata.ktx
+    api libs.androidx.lifecycle.process
+
+    api "androidx.activity:activity-ktx:1.9.1"
+    api "androidx.fragment:fragment-ktx:1.6.2"
+
+    api 'com.google.android.flexbox:flexbox:3.0.0'
+    api "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+    api 'androidx.paging:paging-runtime:3.2.1'
+
+    api 'com.squareup.okhttp3:okhttp:4.11.0'
+
+    api 'com.squareup.retrofit2:retrofit:2.11.0'
+    api 'com.squareup.retrofit2:converter-gson:2.11.0'
+    api 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+    api 'io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4'
+
+
+    api "com.github.bumptech.glide:glide:4.16.0"
+    api 'jp.wasabeef:glide-transformations:4.3.0'
+    api "com.github.bumptech.glide:okhttp3-integration:4.6.1"
+    api "com.github.chrisbanes:PhotoView:2.3.0"
+    api "com.github.li-xiaojun:XPopup:2.9.3"
+    api "com.github.getActivity:ShapeView:9.2"
+    api "com.blankj:utilcodex:1.31.1"
+
+
+
+    api 'cn.rongcloud.sdk:im_lib:5.21.1'
+
+    api 'cn.rongcloud.sdk.push:rong:5.21.1'
+
+    api 'cn.rongcloud.sdk.push:fcm:5.21.1'
+
+    api 'io.github.youth5201314:banner:2.2.3'
+
+    api 'com.contrarywind:Android-PickerView:4.1.9'
+
+
+    api 'com.aliyun.dpa:oss-android-sdk:2.9.21'
+
+    api 'com.danikula:videocache:2.7.0'
+
+
+    api 'com.google.android.gms:play-services-location:21.3.0'
+
+    api 'com.android.billingclient:billing-ktx:8.0.0'
+
+    api "com.google.android.gms:play-services-auth:21.3.0"
+
+    api 'com.iceteck.silicompressorr:silicompressor:2.2.4'
+
+    api 'com.reyun.solar.engine.oversea:solar-engine-core:1.3.1.0'
+
+    api 'com.adjust.sdk:adjust-android:5.4.4'
+    api 'com.android.installreferrer:installreferrer:2.2'
+    api 'com.google.android.gms:play-services-ads-identifier:18.0.1'
+
+    api 'com.github.Dimezis:BlurView:version-3.2.0'
+
+
+}

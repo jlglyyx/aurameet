@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingHorizontal="@dimen/dp_40"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_marginTop="@dimen/dp_120"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iv_empty_message"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No messages"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_20"
+        android:layout_marginTop="@dimen/dp_15"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You haven't had a coversation yet"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_6"
+        android:gravity="center"
+        />
+
+</LinearLayout>

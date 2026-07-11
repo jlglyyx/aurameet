@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:id="@+id/ll_limit_message"
+    android:paddingVertical="@dimen/dp_10"
+    android:paddingHorizontal="@dimen/dp_10"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/iv_limit_message"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/white"
+        android:text="Get Premium to send unlimited messages!"
+        android:gravity="center"/>
+
+    <com.hjq.shape.view.ShapeTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_13"
+        app:shape_radius="@dimen/dp_19"
+        app:shape_solidColor="@color/color_EAA82B"
+        android:textColor="@color/white"
+        android:id="@+id/stv_upgrade_account"
+        android:paddingVertical="@dimen/dp_10"
+        android:paddingHorizontal="@dimen/dp_40"
+        android:text="Upgrade Account"
+        android:gravity="center"/>
+
+</LinearLayout>

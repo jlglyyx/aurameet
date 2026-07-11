@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.view.ShapeTextView
+    android:id="@+id/tv_title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/dp_10"
+    android:paddingVertical="@dimen/dp_4"
+    android:textColor="@color/color_151515"
+    android:textSize="@dimen/sp_10"
+    app:shape_radius="@dimen/dp_5"
+    android:layout_marginEnd="@dimen/dp_10"
+    app:shape_solidColor="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

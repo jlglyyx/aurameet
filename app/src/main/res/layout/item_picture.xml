@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chat.lib_common.widget.PictureContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/pv_container"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/play_view"
+        android:keepScreenOn="true"
+        app:resize_mode="fit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:id="@+id/iv_cover"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"/>
+    <com.github.chrisbanes.photoview.PhotoView
+        android:layout_width="0dp"
+        android:id="@+id/iv_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"/>
+</com.chat.lib_common.widget.PictureContainer>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:shape_radiusInTopLeft="@dimen/dp_20"
+    app:shape_radiusInTopRight="@dimen/dp_20"
+    app:shape_solidColor="@color/color_222222">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/dp_25"
+        android:paddingVertical="@dimen/dp_22">
+
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arial_black"
+            android:text="Profile Photo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:gravity="center"
+            android:enabled="false"
+            app:shape_solidDisabledColor="@color/color_C5C5C5"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_2"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_title"
+            app:shape_radius="@dimen/dp_12"
+            app:shape_solidColor="@color/color_button"
+            app:shape_solidPressedColor="@color/pressed_color_light" />
+
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:padding="@dimen/dp_2"
+            android:src="@drawable/iv_close_buy_right"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_21"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="1:1.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:shapeAppearance="@style/RadiusStyle_15" />
+
+        <com.chat.lib_common.widget.LoadImageView
+            android:id="@+id/iv_load"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/iv_message_load"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_image"
+            app:layout_constraintEnd_toEndOf="@+id/iv_image"
+            app:layout_constraintStart_toStartOf="@+id/iv_image"
+            app:layout_constraintTop_toTopOf="@+id/iv_image" />
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/stv_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_17"
+            android:text="Edit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_image"
+            app:shape_radius="@dimen/dp_29"
+            app:shape_solidColor="@color/color_button"
+            app:shape_solidPressedColor="@color/pressed_color_light" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.hjq.shape.layout.ShapeConstraintLayout>

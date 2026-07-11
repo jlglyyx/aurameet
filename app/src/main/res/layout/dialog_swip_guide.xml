@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp_20"
+    android:paddingVertical="@dimen/dp_20"
+    app:shape_radius="@dimen/dp_20"
+    android:gravity="center_horizontal"
+    app:shape_solidColor="@color/color_FFF7F3">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Swipe Right to Match"
+        android:textColor="@color/color_151515"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dp_3"
+        android:text="Discover your perfect match &amp; start something special 👅"
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/sp_14" />
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_15"
+        android:src="@drawable/iv_i_like_empty"/>
+
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:enabled="true"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dp_14"
+        android:text="Let's Go!"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        app:shape_radius="@dimen/dp_25"
+        app:shape_solidColor="@color/color_EAA82B"
+        app:shape_solidPressedColor="@color/pressed_color_dark" />
+
+</com.hjq.shape.layout.ShapeLinearLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/dp_20"
+    android:paddingVertical="@dimen/dp_20"
+    app:shape_radius="@dimen/dp_20"
+    app:shape_solidColor="@color/color_FEF3FF">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Permission Required"
+        android:textColor="@color/color_151515"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/dp_3"
+        android:text="Please enable file and media access in settings to use this feature."
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/sp_14" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:orientation="horizontal">
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_14"
+            android:text="Cancel"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/sp_16"
+            app:shape_radius="@dimen/dp_25"
+            app:shape_strokeColor="@color/color_999999"
+            app:shape_strokeSize="@dimen/dp_2" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_commit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_14"
+            android:text="Confirm"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:shape_radius="@dimen/dp_25"
+            app:shape_solidColor="@color/color_button"
+            app:shape_solidPressedColor="@color/pressed_color_dark" />
+
+    </LinearLayout>
+
+</com.hjq.shape.layout.ShapeLinearLayout>

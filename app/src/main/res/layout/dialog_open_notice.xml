@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:shape_radius="@dimen/dp_20"
+    app:shape_solidColor="@color/color_FFF7F3">
+
+
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_gravity="end"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:padding="@dimen/dp_8"
+        android:src="@drawable/iv_close_wlm" />
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="@dimen/dp_86"
+        android:layout_height="@dimen/dp_86"
+        android:src="@drawable/iv_open_notice" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_24"
+        android:gravity="center"
+        android:text="Never Miss New Match"
+        android:textColor="@color/color_151515"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        android:text="Turn on notification Now! Once get new match, you can be notified immediately."
+        android:textColor="@color/color_666666"
+        android:textSize="@dimen/sp_14" />
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/stv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_25"
+        android:layout_marginTop="@dimen/dp_20"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dp_14"
+        android:text="Notify me"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:shape_radius="@dimen/dp_25"
+        app:shape_solidColor="@color/color_button"
+        app:shape_solidPressedColor="@color/pressed_color_light" />
+
+
+</com.hjq.shape.layout.ShapeLinearLayout>

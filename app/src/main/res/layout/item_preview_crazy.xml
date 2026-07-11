@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chat.lib_common.widget.PictureContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pv_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <eightbitlab.com.blurview.BlurTarget
+        android:id="@+id/target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <com.chat.jolt.widget.CustomVideoPlay
+        android:id="@+id/play_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        app:resize_mode="fit" />
+
+
+    </eightbitlab.com.blurview.BlurTarget>
+
+    <com.github.chrisbanes.photoview.PhotoView
+        android:id="@+id/iv_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </eightbitlab.com.blurview.BlurView>
+
+
+    <FrameLayout
+        android:id="@+id/fl_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/stv_time"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:drawablePadding="@dimen/dp_3"
+            android:paddingHorizontal="@dimen/dp_5"
+            android:paddingVertical="@dimen/dp_2"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            app:drawableStartCompat="@drawable/iv_time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_radius="@dimen/dp_12"
+            app:shape_solidColor="@color/color_button" />
+    </FrameLayout>
+
+<!--    <com.hjq.shape.view.ShapeTextView-->
+<!--        android:id="@+id/stv_time"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/dp_32"-->
+<!--        android:drawablePadding="@dimen/dp_3"-->
+<!--        android:layout_marginEnd="@dimen/dp_10"-->
+<!--        android:paddingHorizontal="@dimen/dp_5"-->
+<!--        android:paddingVertical="@dimen/dp_2"-->
+<!--        android:text="00:00"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="@dimen/sp_12"-->
+<!--        android:visibility="gone"-->
+<!--        app:drawableStartCompat="@drawable/iv_time"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:shape_radius="@dimen/dp_12"-->
+<!--        app:shape_solidColor="@color/color_E70614" />-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_lock"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_lock_cover"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0.98"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:drawablePadding="@dimen/dp_8"
+            android:text="Private Video"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:drawableStartCompat="@drawable/iv_time_lock"
+            app:layout_constraintBottom_toTopOf="@+id/tv_desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:text="Upgrade your account, to view the Private Video."
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toTopOf="@+id/scl_open_vip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.hjq.shape.layout.ShapeLinearLayout
+            android:id="@+id/scl_open_vip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_65"
+            android:layout_marginBottom="@dimen/dp_30"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shape_radius="@dimen/dp_25"
+            app:shape_solidColor="@color/color_button">
+
+            <ImageView
+                android:layout_width="@dimen/dp_18"
+                android:layout_height="@dimen/dp_18"
+                android:id="@+id/iv_type"
+                android:src="@drawable/iv_open_like_vip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:text="Get Premium"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18"
+                android:id="@+id/tv_get_vip"
+                android:textStyle="bold" />
+        </com.hjq.shape.layout.ShapeLinearLayout>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_destroy_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dp_10"
+        app:layout_constrainedWidth="true"
+        app:shape_radius="@dimen/dp_5"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:id="@+id/iv_error"
+            android:src="@drawable/iv_crazy_video_error"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_expired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center"
+            android:text="Expired"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+
+    </LinearLayout>
+
+
+</com.chat.lib_common.widget.PictureContainer>

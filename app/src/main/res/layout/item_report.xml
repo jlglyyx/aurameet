@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.view.ShapeTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_16"
+    android:id="@+id/tv_content"
+    android:layout_marginStart="@dimen/dp_20"
+    android:paddingHorizontal="@dimen/dp_20"
+    android:paddingVertical="@dimen/dp_9"
+    app:shape_radius="@dimen/dp_10"
+    app:shape_solidColor="@color/color_36343A"
+    android:layout_marginBottom="@dimen/dp_12"
+    android:gravity="center"
+    android:singleLine="true"
+    android:layout_height="wrap_content">
+
+</com.hjq.shape.view.ShapeTextView>

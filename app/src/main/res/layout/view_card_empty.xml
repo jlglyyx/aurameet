@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingHorizontal="@dimen/dp_40"
+    android:layout_width="match_parent"
+    android:clickable="true"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iv_card_empty"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No More Profiles"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        />
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Check Who Likes You or return later for new profiles."
+        android:textColor="@color/color_999999"
+        android:textSize="@dimen/sp_16"
+        android:layout_marginTop="@dimen/dp_6"
+        android:gravity="center"
+        />
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/stv_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_25"
+        android:gravity="center"
+        android:paddingVertical="@dimen/dp_17"
+        android:text="See who Like you"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_18"
+        android:textStyle="bold"
+        app:shape_radius="@dimen/dp_29"
+        app:shape_solidPressedColor="@color/pressed_color_light"
+        app:shape_solidColor="@color/color_EAA82B"
+        />
+</LinearLayout>

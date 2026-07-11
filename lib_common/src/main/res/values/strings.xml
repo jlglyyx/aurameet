@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="capricorn">Capricorn</string>
+    <string name="aquarius">Aquarius</string>
+    <string name="pisces">Pisces</string>
+    <string name="aries">Aries</string>
+    <string name="taurus">Taurus</string>
+    <string name="gemini">Gemini</string>
+    <string name="cancer">Cancer</string>
+    <string name="leo">Leo</string>
+    <string name="virgo">Virgo</string>
+    <string name="libra">Libra</string>
+    <string name="scorpio">Scorpio</string>
+    <string name="sagittarius">Sagittarius</string>
+
+
+
+    <string name="say_hi_1">You look amazing in your profile picture.</string>
+    <string name="say_hi_2">Hey~ How’s it going?</string>
+    <string name="say_hi_3">You are gorgeous！</string>
+    <string name="say_hi_4">Hello stranger！</string>
+    <string name="say_hi_5">Hey! What brings you here?</string>
+    <string name="say_hi_6">Hey! Funny Meeting you here.</string>
+    <string name="say_hi_7">Good to see you!</string>
+    <string name="say_hi_8">Howdy!</string>
+    <string name="say_hi_9">Heyyy!</string>
+    <string name="say_hi_10">Whassup?</string>
+    <string name="say_hi_11">Will u catch me If I\'m fallen for u? 😍</string>
+    <string name="say_hi_12">Hey, we\'re so close in distance!</string>
+
+</resources>

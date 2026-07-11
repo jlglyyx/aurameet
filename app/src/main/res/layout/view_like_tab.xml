@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="111111"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        android:id="@+id/tv_title"/>
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/stv_message_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minWidth="@dimen/dp_18"
+        android:minHeight="@dimen/dp_18"
+        android:text="New"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/dp_6"
+        app:shape_strokeSize="@dimen/dp_1"
+        app:shape_strokeColor="@color/white"
+        android:paddingHorizontal="@dimen/dp_8"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_10"
+        app:shape_radius="@dimen/dp_10"
+        app:shape_solidColor="@color/color_E70614" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="@dimen/dp_1"
+        android:background="@color/white"
+        android:alpha="0.25"
+        android:id="@+id/view_line"
+        android:layout_height="match_parent"/>
+
+
+
+
+</LinearLayout>

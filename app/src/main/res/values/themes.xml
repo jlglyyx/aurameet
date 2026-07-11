@@ -1,0 +1,102 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Jolt" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/appColor</item>
+
+        <item name="android:fontFamily">@font/rany_m</item>
+
+    </style>
+
+    <style name="Theme.Jolt" parent="Base.Theme.Jolt" />
+
+
+
+    <style name="Theme.Splash" parent="Theme.Jolt" >
+
+        <item name="android:windowBackground">@drawable/layer_splash</item>
+    </style>
+    <style name="Theme.Main" parent="Theme.Jolt" >
+
+        <item name="android:windowBackground">@drawable/layer_main</item>
+    </style>
+
+    <style name="Theme.Login" parent="Theme.Jolt" >
+
+    </style>
+
+
+    <style name="Base.Theme.Dialog" parent="Theme.Material3.DayNight.Dialog">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:navigationBarColor">@color/appColor</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="PictureDetailDialog" parent="Base.Theme.Dialog">
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+
+    <style name="Theme.Dialog" parent="Base.Theme.Dialog">
+    </style>
+
+
+    <style name="RadiusStyle_3">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_3</item>
+    </style>
+    <style name="RadiusStyle_5">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_5</item>
+    </style>
+    <style name="RadiusStyle_8">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_8</item>
+    </style>
+    <style name="RadiusStyle_10">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_10</item>
+    </style>
+    <style name="RadiusStyle_15">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_15</item>
+    </style>
+    <style name="RadiusStyle_20">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_20</item>
+    </style>
+    <style name="circleStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <style name="CardCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_15</item>
+    </style>
+
+    <style name="LikeCorners">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/dp_15</item>
+        <item name="cornerSizeTopRight">@dimen/dp_15</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+
+    <style name="CustomShape" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">12dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">16dp</item>
+    </style>
+</resources>

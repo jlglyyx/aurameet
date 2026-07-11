@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:name="com.chat.lib_common.app.BaseApplication"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        tools:replace="android:appComponentFactory"
+        android:theme="@style/Theme.Jolt"
+        android:largeHeap="true"
+        tools:targetApi="28">
+
+        <activity
+            android:name=".activity.SplashActivity"
+            android:theme="@style/Theme.Splash"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.LoginActivity"
+            android:theme="@style/Theme.Login"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.LoginEmailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Main"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.BirthStepActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Main"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.SexStepActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Main"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.IWantStepActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Main"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.HobbyStepActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Main"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Main"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.WebActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.PayWebActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.DeleteAccountActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.FeedBackActivity"
+            android:screenOrientation="portrait"
+            android:exported="true"/>
+        <activity
+            android:name=".activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+
+        <activity
+            android:name=".activity.NoticeMessageActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".activity.ReportActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".activity.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".activity.EditUserInfoActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+        <activity
+            android:name=".activity.VisitorActivity"
+            android:screenOrientation="portrait"
+            android:exported="true" />
+    </application>
+
+</manifest>

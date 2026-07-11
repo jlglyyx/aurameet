@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "7730995725598",
+    "project_id": "jolt-eeb6d",
+    "storage_bucket": "jolt-eeb6d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773099572598:android:8c7eadf4519903285c7e57zzz",
+        "android_client_info": {
+          "package_name": "com.chat.jolt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASM7ZJBVJ5y0_7YegTUobo9mFm1s11KMZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

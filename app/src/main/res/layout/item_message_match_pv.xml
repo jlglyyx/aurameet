@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingTop="@dimen/dp_15"
+    android:layout_marginVertical="@dimen/dp_10"
+    android:layout_marginHorizontal="@dimen/dp_15"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:shape_solidColor="@color/color_333333"
+    app:shape_radius="@dimen/dp_15"
+    android:orientation="vertical">
+    <include
+        android:id="@+id/ll_time"
+        layout="@layout/item_message_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:text="Lacus's Private Hub"
+        android:layout_width="0dp"
+        android:ellipsize="middle"
+        android:id="@+id/tv_name"
+        android:layout_marginStart="@dimen/dp_15"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        />
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        android:layout_marginStart="@dimen/dp_15"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="0dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/cl_video"
+        app:layout_constraintEnd_toStartOf="@+id/cl_photo"
+        app:shape_solidColor="@color/color_454545"
+        app:shape_radius="@dimen/dp_10"
+        app:layout_constraintDimensionRatio="1:1.1"
+        android:layout_height="0dp">
+
+        <eightbitlab.com.blurview.BlurTarget
+            android:id="@+id/system_target"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <com.chat.lib_common.widget.RoundPlayerView
+            android:id="@+id/system_play_view"
+            android:keepScreenOn="true"
+            app:resize_mode="zoom"
+            android:visibility="gone"
+            app:surface_type="texture_view"
+            app:use_controller="false"
+            android:background="@color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        </eightbitlab.com.blurview.BlurTarget>
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurView"
+            app:layout_constraintTop_toTopOf="@+id/target"
+            app:layout_constraintStart_toStartOf="@+id/target"
+            app:layout_constraintEnd_toEndOf="@+id/target"
+            app:layout_constraintBottom_toBottomOf="@+id/target"
+            android:layout_width="0dp"
+            android:layout_height="0dp">
+
+
+        </eightbitlab.com.blurview.BlurView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/siv_video_cover"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/RadiusStyle_10"/>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/siv_video"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/RadiusStyle_10"/>
+
+        <ImageView
+            android:id="@+id/iv_video"
+            android:layout_width="@dimen/dp_25"
+            android:layout_height="@dimen/dp_25"
+            android:src="@drawable/iv_video"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_10"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/white"
+            />
+        <ImageView
+            android:id="@+id/iv_video_error"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@drawable/iv_video_error"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeColor="@color/white"
+            />
+
+        <TextView
+            android:text="Private Video\nis empty"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:id="@+id/tv_video_desc"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginHorizontal="@dimen/dp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            />
+
+        <com.hjq.shape.layout.ShapeLinearLayout
+            android:id="@+id/sll_video_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_3"
+            android:paddingHorizontal="@dimen/dp_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shape_radiusInTopRight="@dimen/dp_5"
+            app:shape_radiusInBottomLeft="@dimen/dp_10"
+            app:shape_solidColor="@color/color_button">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp_6"
+                android:gravity="center"
+                android:text="00:00"
+                android:id="@+id/tv_video_time"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/iv_time" />
+        </com.hjq.shape.layout.ShapeLinearLayout>
+
+
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        app:layout_constraintTop_toBottomOf="@+id/tv_name"
+        android:layout_marginStart="@dimen/dp_15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/cl_video"
+        android:layout_marginEnd="@dimen/dp_15"
+        android:layout_width="0dp"
+        android:id="@+id/cl_photo"
+
+        app:shape_solidColor="@color/color_454545"
+        app:shape_radius="@dimen/dp_10"
+        app:layout_constraintStart_toEndOf="@+id/cl_video"
+        app:layout_constraintTop_toTopOf="@+id/cl_video"
+        app:layout_constraintDimensionRatio="1:1.1"
+        android:layout_height="0dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/siv_photo"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/RadiusStyle_10"/>
+
+        <ImageView
+            android:id="@+id/iv_photo_error"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:src="@drawable/iv_photo_error"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeColor="@color/white"
+            />
+
+        <TextView
+            android:text="Private Photo\nis empty"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_12"
+            android:id="@+id/tv_photo_desc"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginHorizontal="@dimen/dp_15"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="wrap_content"
+            />
+
+        <com.hjq.shape.layout.ShapeLinearLayout
+            android:id="@+id/sll_photo_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingVertical="@dimen/dp_3"
+            android:visibility="gone"
+            android:paddingHorizontal="@dimen/dp_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:shape_radiusInTopRight="@dimen/dp_5"
+            app:shape_radiusInBottomLeft="@dimen/dp_10"
+            app:shape_solidColor="@color/color_button">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp_6"
+                android:gravity="center"
+                android:text="00:00"
+                android:id="@+id/tv_photo_time"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_11"
+                android:textStyle="bold"
+                app:drawableStartCompat="@drawable/iv_time" />
+        </com.hjq.shape.layout.ShapeLinearLayout>
+
+
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+
+    <View
+        android:id="@+id/view_line"
+        app:layout_constraintTop_toBottomOf="@+id/cl_video"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_15"/>
+
+    <com.hjq.shape.layout.ShapeConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_12"
+        android:id="@+id/scl_turn"
+        app:shape_solidColor="@color/color_454545"
+        app:shape_radiusInBottomLeft="@dimen/dp_15"
+        app:shape_radiusInBottomRight="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_15"
+        app:layout_constraintTop_toBottomOf="@+id/cl_video">
+
+        <ImageView
+            android:id="@+id/iv_turn_tag_1"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_32"
+            android:src="@drawable/iv_turn_tag_1"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="@color/white"
+             />
+
+
+        <TextView
+            android:text="0 Turn-ons in Common"
+            android:layout_width="0dp"
+            android:ellipsize="middle"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            android:id="@+id/tv_turn"
+            android:layout_marginHorizontal="@dimen/dp_8"
+            app:layout_constraintTop_toTopOf="@+id/iv_turn_tag_1"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_turn_tag_1"
+            app:layout_constraintStart_toEndOf="@+id/iv_turn_tag_1"
+            app:layout_constraintEnd_toStartOf="@+id/iv_turn_down"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            />
+
+        <ImageView
+            android:id="@+id/iv_turn_down"
+            android:layout_width="@dimen/dp_24"
+            android:layout_height="@dimen/dp_24"
+            android:src="@drawable/iv_turn_down"
+            android:layout_marginStart="@dimen/dp_15"
+            app:layout_constraintTop_toTopOf="@id/iv_turn_tag_1"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_turn_tag_1"
+            app:strokeColor="@color/white"
+            android:layout_marginEnd="@dimen/dp_15"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <HorizontalScrollView
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="0dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginStart="@dimen/dp_15"
+            android:layout_marginEnd="@dimen/dp_5"
+            android:scrollbars="none"
+            android:id="@+id/scrollView"
+            app:layout_constraintTop_toBottomOf="@+id/iv_turn_tag_1"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/ll_turn"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+    </com.hjq.shape.layout.ShapeConstraintLayout>
+
+</com.hjq.shape.layout.ShapeConstraintLayout>

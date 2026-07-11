@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_10"
+        android:layout_marginVertical="@dimen/dp_5">
+
+        <include
+            android:id="@+id/ll_time"
+            layout="@layout/item_message_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_time"
+            app:shapeAppearanceOverlay="@style/RadiusStyle_10" />
+
+
+        <com.hjq.shape.layout.ShapeConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_avatar"
+            app:layout_constraintTop_toTopOf="@+id/iv_avatar"
+            app:shape_radius="@dimen/dp_10"
+            android:padding="@dimen/dp_5"
+            app:shape_solidColor="@color/color_333333">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/stv_image"
+                android:layout_width="@dimen/dp_160"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintDimensionRatio="3:4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearance="@style/RadiusStyle_10" />
+
+            <com.hjq.shape.layout.ShapeLinearLayout
+                android:id="@+id/sll_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/dp_3"
+                android:paddingHorizontal="@dimen/dp_5"
+                app:layout_constraintBottom_toBottomOf="@+id/stv_image"
+                app:layout_constraintStart_toStartOf="@+id/stv_image"
+                app:shape_radiusInTopRight="@dimen/dp_5"
+                app:shape_radiusInBottomLeft="@dimen/dp_10"
+                app:shape_solidColor="@color/color_button">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:gravity="center"
+                    android:text="00:00"
+                    android:id="@+id/tv_time"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_11"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/iv_time" />
+            </com.hjq.shape.layout.ShapeLinearLayout>
+
+
+            <com.hjq.shape.layout.ShapeLinearLayout
+                android:id="@+id/sll_expired"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/stv_image"
+                app:layout_constraintEnd_toEndOf="@+id/stv_image"
+                app:layout_constraintStart_toStartOf="@+id/stv_image"
+                app:layout_constraintTop_toTopOf="@+id/stv_image"
+                app:shape_radius="@dimen/dp_10"
+                app:shape_solidColor="@color/color_454545">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_46"
+                    android:layout_height="@dimen/dp_46"
+                    android:src="@drawable/iv_photo_error" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:gravity="center"
+                    android:text="Expired"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_14" />
+
+            </com.hjq.shape.layout.ShapeLinearLayout>
+
+
+            <com.hjq.shape.layout.ShapeLinearLayout
+                android:id="@+id/sll_count"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/dp_8"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stv_image"
+                app:shape_radius="@dimen/dp_10"
+                app:shape_solidColor="@color/color_button">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/dp_6"
+                    android:gravity="center"
+                    android:text="Private photo 1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold"
+                    app:drawableStartCompat="@drawable/iv_time_lock" />
+            </com.hjq.shape.layout.ShapeLinearLayout>
+
+        </com.hjq.shape.layout.ShapeConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

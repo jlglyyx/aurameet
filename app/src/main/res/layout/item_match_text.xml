@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<com.hjq.shape.view.ShapeTextView
+    android:id="@+id/stv_content"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/dp_12"
+    android:gravity="center"
+    android:paddingHorizontal="@dimen/dp_15"
+    android:paddingVertical="@dimen/dp_8"
+    android:textColor="@color/white"
+    android:textSize="@dimen/sp_13"
+    app:shape_radius="@dimen/dp_20"
+    app:shape_strokeSize="@dimen/dp_1"
+    app:shape_strokeColor="@color/color_EAA82B"
+    app:shape_solidColor="@color/color_15EAA82B"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />
+</LinearLayout>

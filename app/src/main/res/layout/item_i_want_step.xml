@@ -1,0 +1,58 @@
+<com.hjq.shape.layout.ShapeConstraintLayout
+    android:id="@+id/sll_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    app:shape_strokeColor="@color/transparent"
+    app:shape_strokeSize="@dimen/dp_1"
+    app:shape_radius="@dimen/dp_10"
+    android:layout_marginBottom="@dimen/dp_12"
+    android:layout_marginEnd="@dimen/dp_12"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/siv_0"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearance="@style/RadiusStyle_10"
+        app:layout_constraintDimensionRatio="1:0.6"
+        />
+
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="I'm a man"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:enabled="false"
+        app:shape_textDisabledColor="@color/white"
+        app:shape_solidColor="@color/color_FDDBFF"
+        app:shape_solidDisabledColor="@color/transparent"
+        android:paddingVertical="@dimen/dp_10"
+        app:shape_radiusInBottomLeft="@dimen/dp_10"
+        app:shape_radiusInBottomRight="@dimen/dp_10"
+        app:layout_constraintBottom_toBottomOf="@+id/siv_0"
+        app:layout_constraintStart_toStartOf="@+id/siv_0"
+        app:layout_constraintEnd_toEndOf="@+id/siv_0"
+        android:textColor="@color/firstTextColor"
+        android:textSize="@dimen/sp_12" />
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_image"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/siv_0"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/iv_select_want"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_20"
+        />
+
+</com.hjq.shape.layout.ShapeConstraintLayout>

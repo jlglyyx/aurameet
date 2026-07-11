@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_3"
+    android:layout_marginStart="@dimen/dp_3"
+    app:shape_solidColor="@color/color_36343A"
+    app:shape_radius="@dimen/dp_5"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <com.google.android.material.imageview.ShapeableImageView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/iv_image"
+        android:scaleType="centerCrop"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:shapeAppearanceOverlay="@style/RadiusStyle_5"
+        app:layout_constraintDimensionRatio="1:1"
+        />
+
+
+    <ImageView
+        app:layout_constraintTop_toTopOf="@+id/iv_image"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_image"
+        app:layout_constraintStart_toStartOf="@+id/iv_image"
+        app:layout_constraintEnd_toEndOf="@+id/iv_image"
+        android:src="@drawable/iv_add"
+        android:id="@+id/iv_add"
+        android:layout_width="@dimen/dp_25"
+        android:layout_height="@dimen/dp_25"
+        app:tint="@color/white" />
+
+
+
+</com.hjq.shape.layout.ShapeConstraintLayout>

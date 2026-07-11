@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.imageview.ShapeableImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dp_40"
+    android:layout_height="@dimen/dp_40"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scaleType="centerCrop"
+    app:shapeAppearanceOverlay="@style/RadiusStyle_10"
+    app:strokeWidth="@dimen/dp_1"
+    app:strokeColor="@color/transparent"
+    android:layout_marginEnd="@dimen/dp_5"
+    android:padding="@dimen/dp_2"
+    android:id="@+id/iv_image">
+
+</com.google.android.material.imageview.ShapeableImageView>

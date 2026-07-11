@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/appColor"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:id="@+id/iv_bg1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/iv_login_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+    <ImageView
+        android:src="@drawable/iv_jolt"
+        app:layout_constraintBottom_toTopOf="@+id/sll_google_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+
+
+
+    <com.hjq.shape.layout.ShapeLinearLayout
+        android:id="@+id/sll_google_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingVertical="@dimen/dp_17"
+        android:layout_marginBottom="@dimen/dp_20"
+       app:layout_constraintBottom_toTopOf="@+id/sll_email_login"
+        app:shape_radius="@dimen/dp_30"
+        app:shape_solidGradientStartColor="@color/startGradientColor"
+        app:shape_solidGradientEndColor="@color/endGradientColor"
+        app:shape_solidPressedColor="@color/pressed_color_light">
+
+        <ImageView
+            android:layout_width="@dimen/dp_26"
+            android:layout_height="@dimen/dp_26"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:src="@drawable/iv_google" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/rany_b"
+            android:text="Login with Google"
+            android:textColor="@color/firstTextColor"
+            android:textSize="@dimen/sp_16" />
+
+    </com.hjq.shape.layout.ShapeLinearLayout>
+
+
+
+    <com.hjq.shape.layout.ShapeLinearLayout
+        android:id="@+id/sll_email_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_20"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:paddingVertical="@dimen/dp_17"
+        app:layout_constraintBottom_toTopOf="@+id/tv_notice"
+        android:orientation="horizontal"
+        app:shape_radius="@dimen/dp_30"
+        app:shape_solidColor="@color/white_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="@dimen/dp_22"
+            android:layout_height="@dimen/dp_22"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:src="@drawable/iv_email" />
+
+        <TextView
+            android:id="@+id/sb_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/rany_b"
+            android:text="Login with Email"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintTop_toBottomOf="@+id/iv_hi" />
+
+    </com.hjq.shape.layout.ShapeLinearLayout>
+
+    <TextView
+        android:id="@+id/tv_notice"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_50"
+        android:layout_marginTop="@dimen/dp_20"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/dp_25"
+        android:textColor="@color/color_D9D9D9"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="@+id/sll_google_login"
+        app:layout_constraintStart_toStartOf="@+id/sll_google_login"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

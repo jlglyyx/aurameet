@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/dp_3"
+    android:layout_height="wrap_content">
+
+
+    <com.hjq.shape.layout.ShapeLinearLayout
+        android:id="@+id/sll_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:gravity="center"
+        app:shape_strokeSize="@dimen/dp_2"
+        android:layout_marginHorizontal="@dimen/dp_15"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/dp_25"
+        android:paddingVertical="@dimen/dp_15"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingBottom="@dimen/dp_19"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_radius="@dimen/dp_8"
+        app:shape_solidColor="@color/color_434343">
+
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:fontFamily="@font/arial_black"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_16" />
+
+    </com.hjq.shape.layout.ShapeLinearLayout>
+
+    <com.hjq.shape.view.ShapeTextView
+        android:id="@+id/tv_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/dp_6"
+        android:paddingVertical="@dimen/dp_4"
+        android:text="Save 56%"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_12"
+        app:shape_strokeColor="@color/white"
+        app:shape_strokeSize="@dimen/dp_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shape_radiusInBottomLeft="@dimen/dp_2"
+        app:shape_radiusInBottomRight="@dimen/dp_8"
+        app:shape_radiusInTopLeft="@dimen/dp_8"
+        app:shape_radiusInTopRight="@dimen/dp_8"
+        app:shape_solidColor="@color/color_E70614" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
