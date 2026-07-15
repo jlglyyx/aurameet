@@ -50,7 +50,7 @@ class VisitorAdapter :
             tvName.text = "${item.nickname},${item.age}"
 
             SpanUtils.with(tvMessage).append("Viewed you: ").append("${item.visitorTimes}Times").setForegroundColor(context.getColor(
-                R.color.color_E70614)).create()
+                R.color.color_FDDBFF)).create()
 
             itemView.stvAline.visibility =
                 if (item.onlineStatus == "Online") View.VISIBLE else View.GONE

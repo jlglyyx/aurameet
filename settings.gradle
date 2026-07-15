@@ -57,6 +57,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Jolt"
+rootProject.name = "aurameet"
 include ':app'
 include ':lib_common'
