@@ -43,7 +43,7 @@
         android:layout_marginTop="@dimen/dp_5"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toStartOf="@+id/tv_chat"
+        app:layout_constraintEnd_toStartOf="@+id/iv_0"
         app:layout_constraintStart_toEndOf="@+id/iv_avatar"
         app:layout_constraintTop_toTopOf="@+id/iv_avatar">
 
@@ -56,7 +56,7 @@
             android:maxEms="7"
             android:singleLine="true"
             android:textColor="@color/white"
-            android:textSize="@dimen/sp_17"
+            android:textSize="@dimen/sp_16"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@+id/tv_update_time"
             app:layout_constraintStart_toEndOf="@+id/iv_avatar"
@@ -75,12 +75,14 @@
         android:layout_height="wrap_content"
         android:ellipsize="end"
         android:singleLine="true"
-        android:textColor="@color/color_999999"
-        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white_50"
+        android:textSize="@dimen/sp_13"
         app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
         app:layout_constraintEnd_toEndOf="@+id/ll_container"
         app:layout_constraintStart_toStartOf="@+id/ll_container"
         app:layout_constraintTop_toBottomOf="@+id/ll_container" />
+
+
 
 
 
@@ -89,17 +91,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Chat Now"
-        android:textColor="@color/white"
+        android:textColor="@color/firstTextColor"
         android:textSize="@dimen/sp_14"
         app:shape_radius="@dimen/dp_25"
-        app:shape_solidColor="@color/color_EAA82B"
-        android:paddingHorizontal="@dimen/dp_12"
-        android:paddingVertical="@dimen/dp_5"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_6"
+        app:shape_solidGradientStartColor="@color/startGradientColor"
+        app:shape_solidGradientEndColor="@color/endGradientColor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_0"
+        android:layout_width="@dimen/dp_28"
+        android:layout_height="@dimen/dp_28"
+        android:src="@drawable/iv_to_visitor_tag"
+        android:layout_marginStart="-10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_chat"
+        app:layout_constraintStart_toStartOf="@+id/tv_chat"
+        app:layout_constraintTop_toTopOf="@+id/tv_chat"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

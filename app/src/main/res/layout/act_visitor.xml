@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/appColor"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -57,25 +56,25 @@
                     app:shape_solidGradientOrientation="bottomToTop"
                     app:shape_solidGradientStartColor="@color/appColor" />
 
-                <com.hjq.shape.layout.ShapeLinearLayout
+                <LinearLayout
                     android:id="@+id/scl_open_vip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="@dimen/dp_45"
                     android:layout_marginBottom="@dimen/dp_18"
                     android:gravity="center"
+                    android:background="@drawable/iv_b_open_vip_bg"
                     android:orientation="horizontal"
                     android:paddingVertical="@dimen/dp_14"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:shape_radius="@dimen/dp_25"
-                    app:shape_solidColor="@color/color_button">
+                   >
 
 
                     <ImageView
-                        android:layout_width="@dimen/dp_18"
-                        android:layout_height="@dimen/dp_18"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
                         android:src="@drawable/iv_open_like_vip" />
 
                     <TextView
@@ -83,10 +82,10 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp_5"
                         android:text="Unlock All My Visitor"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/sp_18"
+                        android:textColor="@color/color_563500"
+                        android:textSize="@dimen/sp_14"
                         android:textStyle="bold" />
-                </com.hjq.shape.layout.ShapeLinearLayout>
+                </LinearLayout>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

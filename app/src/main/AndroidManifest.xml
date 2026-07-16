@@ -16,7 +16,7 @@
         android:name="com.chat.lib_common.app.BaseApplication"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         tools:replace="android:appComponentFactory"
-        android:theme="@style/Theme.Jolt"
+        android:theme="@style/Theme.Main"
         android:largeHeap="true"
         tools:targetApi="28">
 
@@ -40,22 +40,18 @@
         <activity
             android:name=".activity.LoginEmailActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Main"
             android:exported="true"/>
         <activity
             android:name=".activity.BirthStepActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Main"
             android:exported="true"/>
         <activity
             android:name=".activity.SexStepActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Main"
             android:exported="true"/>
         <activity
             android:name=".activity.IWantStepActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Main"
             android:exported="true"/>
         <activity
             android:name=".activity.HobbyStepActivity"
@@ -65,7 +61,6 @@
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.Main"
             android:exported="true"/>
         <activity
             android:name=".activity.WebActivity"
