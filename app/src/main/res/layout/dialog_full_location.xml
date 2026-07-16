@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_131117"
+    android:background="@drawable/iv_full_location_bg"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     app:shape_radiusInTopLeft="@dimen/dp_20"
@@ -41,11 +41,12 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:paddingVertical="@dimen/dp_17"
-        app:shape_radius="@dimen/dp_29"
         app:layout_constraintBottom_toTopOf="@+id/tv_cancel"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:shape_solidColor="@color/color_EAA82B"
+        app:shape_radius="@dimen/dp_30"
+        app:shape_solidGradientStartColor="@color/startGradientColor"
+        app:shape_solidGradientEndColor="@color/endGradientColor"
         app:shape_solidPressedColor="@color/pressed_color_light">
 
         <ImageView
@@ -59,8 +60,8 @@
             android:layout_marginStart="@dimen/dp_5"
             android:gravity="center"
             android:text="Turn on"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_18" />
+            android:textColor="@color/firstTextColor"
+            android:textSize="@dimen/sp_16" />
 
     </com.hjq.shape.layout.ShapeLinearLayout>
 
