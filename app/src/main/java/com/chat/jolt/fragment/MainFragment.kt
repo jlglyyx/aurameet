@@ -500,7 +500,7 @@ class MainFragment : BaseFragment<FraMainBinding, MainViewModel>(FraMainBinding:
                         )
                     }
 
-                    sclOpenVip.setOnClickListener {
+                    stvMatch.setOnClickListener {
                         mViewModel.getVipInfo(
                             AppConstant.Constant.PAY_VIP,
                             mVipShowValue[12],

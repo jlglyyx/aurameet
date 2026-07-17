@@ -14,26 +14,23 @@
         android:layout_width="@dimen/dp_32"
         android:layout_height="@dimen/dp_32"
         android:id="@+id/iv_right"
-        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginStart="@dimen/dp_18"
         app:layout_constraintTop_toTopOf="@+id/tv_title"
         app:layout_constraintBottom_toBottomOf="@+id/tv_title"
         app:layout_constraintStart_toStartOf="parent"
         android:src="@drawable/iv_buy_flash_chat" />
 
     <ImageView
-        android:layout_width="@dimen/dp_32"
-        android:layout_height="@dimen/dp_32"
-        android:id="@+id/iv_close_right"
-        android:padding="@dimen/dp_5"
-
-        android:layout_marginEnd="@dimen/dp_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iv_close"
         app:layout_constraintTop_toTopOf="@+id/tv_title"
         app:layout_constraintBottom_toBottomOf="@+id/tv_title"
         app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/iv_close_buy_right" />
+        android:src="@drawable/iv_close" />
 
 
-    <TextView
+    <com.hjq.shape.view.ShapeTextView
         android:layout_marginTop="@dimen/dp_17"
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
@@ -42,10 +39,12 @@
         android:gravity="center"
         android:text="Flashchat "
         android:textStyle="bold"
+        app:shape_textStartColor="@color/startGradientColor"
+        app:shape_textEndColor="@color/endGradientColor"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_right"
         android:textColor="@color/white"
-        android:textSize="@dimen/sp_28" />
+        android:textSize="@dimen/sp_20" />
 
     <TextView
         android:id="@+id/tv_desc"
@@ -57,7 +56,7 @@
         android:layout_marginEnd="@dimen/dp_25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        android:textColor="@color/color_999999"
+        android:textColor="@color/white"
         android:textSize="@dimen/sp_16" />
 
     <TextView
@@ -91,7 +90,7 @@
         android:id="@+id/tv_balance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_24"
         android:text="Balance:0"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,21 +102,22 @@
         android:id="@+id/stv_next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_12"
         android:gravity="center"
         android:layout_marginBottom="@dimen/dp_17"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginHorizontal="@dimen/dp_20"
         android:paddingVertical="@dimen/dp_17"
         android:text="Continue"
-        android:textColor="@color/white"
+        android:textColor="@color/firstTextColor"
         android:textSize="@dimen/sp_18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_balance"
         android:textStyle="bold"
-        app:shape_radius="@dimen/dp_29"
-        app:shape_solidColor="@color/color_button"
+        app:shape_radius="@dimen/dp_30"
+        app:shape_solidGradientStartColor="@color/startGradientColor"
+        app:shape_solidGradientEndColor="@color/endGradientColor"
         app:shape_solidPressedColor="@color/pressed_color_light" />
 
 

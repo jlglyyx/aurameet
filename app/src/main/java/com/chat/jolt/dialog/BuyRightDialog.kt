@@ -108,7 +108,7 @@ class BuyRightDialog : BaseDialog<DialogBuyRightBinding>(DialogBuyRightBinding::
             root.edgeToEdgeBottom()
 
 
-            ivCloseRight.click {
+            ivClose.click {
 
                 dismissAllowingStateLoss()
             }

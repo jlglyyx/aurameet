@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_10">#19FFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="white_30">#4DFFFFFF</color>
+    <color name="white_40">#66FFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_70">#B3FFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_90">#E6FFFFFF</color>
+    <color name="white_100">#FFFFFF</color>
+
+
     <color name="black">#FF000000</color>
     <color name="black_30">#30000000</color>
     <color name="black_80">#80000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="white_30">#30FFFFFF</color>
-    <color name="white_10">#10FFFFFF</color>
-    <color name="white_20">#20FFFFFF</color>
-    <color name="white_50">#70FFFFFF</color>
+
     <color name="transparent">@android:color/transparent</color>
     <color name="pressed_color_background">#80FFFFFF</color>
 <!--    <color name="pressed_color_light">#26FFFFFF</color>-->
@@ -165,6 +176,9 @@
     <color name="color_FFFFB0">#FFFFB0</color>
     <color name="color_FFE388">#FFE388</color>
     <color name="color_ECA7FF">#ECA7FF</color>
+    <color name="color_66D4851F">#66D4851F</color>
+    <color name="color_FFBB00">#FFBB00</color>
+    <color name="color_FAF8C7">#FAF8C7</color>
 
     <color name="color_4DFFFFB0">#4DFFFFB0</color>
     <color name="color_4DECA7FF">#4DECA7FF</color>

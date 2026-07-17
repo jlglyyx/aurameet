@@ -21,7 +21,7 @@
         android:paddingBottom="@dimen/dp_19"
         app:layout_constraintTop_toTopOf="parent"
         app:shape_radius="@dimen/dp_8"
-        app:shape_solidColor="@color/color_434343">
+        app:shape_solidColor="@color/white_20">
 
 
         <TextView
@@ -51,21 +51,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:paddingHorizontal="@dimen/dp_6"
-        android:paddingVertical="@dimen/dp_4"
+        android:paddingHorizontal="@dimen/dp_8"
+        android:paddingVertical="@dimen/dp_6"
         android:text="Save 56%"
         android:layout_marginEnd="@dimen/dp_10"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_12"
+        android:textColor="@color/firstTextColor"
+        android:textSize="@dimen/sp_11"
         app:shape_strokeColor="@color/white"
         app:shape_strokeSize="@dimen/dp_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:shape_radiusInBottomLeft="@dimen/dp_2"
-        app:shape_radiusInBottomRight="@dimen/dp_8"
-        app:shape_radiusInTopLeft="@dimen/dp_8"
-        app:shape_radiusInTopRight="@dimen/dp_8"
-        app:shape_solidColor="@color/color_E70614" />
+        app:shape_radiusInBottomRight="@dimen/dp_16"
+        app:shape_radiusInTopLeft="@dimen/dp_16"
+        app:shape_solidGradientStartColor="@color/color_FAF8C7"
+        app:shape_solidGradientEndColor="@color/color_FFBB00" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
