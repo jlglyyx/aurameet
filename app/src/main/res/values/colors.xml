@@ -176,6 +176,7 @@
     <color name="color_161616">#161616</color>
     <color name="color_FDFFD2">#FDFFD2</color>
     <color name="color_1B1B1D">#1B1B1D</color>
+    <color name="color_4A4A4A">#4A4A4A</color>
 
     <color name="firstTextColor">@color/color_151515</color>
     <color name="startGradientColor">@color/color_FFFFB0</color>

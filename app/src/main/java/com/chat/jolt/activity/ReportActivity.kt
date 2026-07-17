@@ -43,7 +43,7 @@ class ReportActivity : BaseActivity<ActReportBinding, ChatViewModel>(ActReportBi
 
             if (list.isEmpty()) return@click
 
-            mViewModel.doReport(list,modelId!!,mViewBinding.setText.text.toString().trim())
+            mViewModel.doReport(list,modelId!!,mViewBinding.setEmails.text.toString().trim())
 
 
         }
@@ -91,11 +91,9 @@ class ReportActivity : BaseActivity<ActReportBinding, ChatViewModel>(ActReportBi
                 position: Int
             ) {
                 itemView.tvContent.text = item.reportTypeName
-                if (item.isCheck){
-                    itemView.tvContent.shapeDrawableBuilder.setSolidColor(getColor(R.color.color_EAA82B)).intoBackground()
-                }else{
-                    itemView.tvContent.shapeDrawableBuilder.setSolidColor(getColor(R.color.color_36343A)).intoBackground()
-                }
+
+                itemView.tvContent.isSelected = item.isCheck
+
 
             }
 
