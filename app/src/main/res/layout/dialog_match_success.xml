@@ -350,7 +350,7 @@
                 android:paddingHorizontal="@dimen/dp_10"
                 android:paddingVertical="@dimen/dp_5"
                 app:shape_radius="@dimen/dp_30"
-                app:shape_solidColor="@color/color_222222">
+                app:shape_solidColor="@color/color_3D3C3A">
 
 
                 <com.hjq.shape.view.ShapeEditText
@@ -362,7 +362,7 @@
                     android:maxLength="1000"
                     android:singleLine="true"
                     android:textColor="@color/white"
-                    android:textColorHint="@color/white_20" />
+                    android:textColorHint="@color/white_30" />
 
                 <ImageView
                     android:id="@+id/iv_send"

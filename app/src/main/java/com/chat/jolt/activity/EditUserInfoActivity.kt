@@ -242,10 +242,8 @@ class EditUserInfoActivity :
 
                 if (position == 0) {
                     mViewLikeTabBinding.tvTitle.setTextColor(getColor(R.color.white))
-                    mViewLikeTabBinding.viewLine.visibility = View.VISIBLE
                 } else {
                     mViewLikeTabBinding.tvTitle.setTextColor(getColor(R.color.color_999999))
-                    mViewLikeTabBinding.viewLine.visibility = View.GONE
                 }
                 mViewLikeTabBinding.stvMessageCount.visibility = View.GONE
 

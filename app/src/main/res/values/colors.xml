@@ -196,6 +196,7 @@
     <color name="color_FFBC48">#FFBC48</color>
     <color name="color_D438FF">#D438FF</color>
     <color name="color_FA9DFF">#FA9DFF</color>
+    <color name="color_3D3C3A">#3D3C3A</color>
 
     <color name="firstTextColor">@color/color_151515</color>
     <color name="startGradientColor">@color/color_FFFFB0</color>

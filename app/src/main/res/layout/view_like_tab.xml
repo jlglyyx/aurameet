@@ -41,14 +41,5 @@
 
     </LinearLayout>
 
-    <View
-        android:layout_width="@dimen/dp_1"
-        android:background="@color/white"
-        android:alpha="0.25"
-        android:id="@+id/view_line"
-        android:layout_height="match_parent"/>
-
-
-
 
 </LinearLayout>

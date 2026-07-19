@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp_15"
         android:layout_marginTop="@dimen/dp_15"
-        android:src="@drawable/iv_likes_logo"
+        android:src="@drawable/iv_logo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,20 +20,16 @@
     <com.google.android.material.tabs.TabLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginTop="@dimen/dp_10"
         android:id="@+id/tabLayout"
         app:tabPadding="@dimen/dp_0"
+        android:layout_marginHorizontal="@dimen/dp_16"
         android:background="@color/transparent"
-        app:tabIndicatorHeight="@dimen/dp_0"
+        app:tabIndicatorHeight="@dimen/dp_3"
+        app:tabIndicatorColor="@color/color_FDDBFF"
         app:tabRippleColor="@color/transparent"
         app:layout_constraintTop_toBottomOf="@+id/iv_logo"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_1"
-        android:alpha="0.25"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout"
-        android:background="@color/white"/>
 
 
     <androidx.viewpager2.widget.ViewPager2

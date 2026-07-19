@@ -41,7 +41,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_25"
         android:gravity="center"
-        android:paddingVertical="@dimen/dp_17"
+        android:paddingVertical="@dimen/dp_20"
         android:text="See who Like you"
         android:textColor="@color/firstTextColor"
         android:textSize="@dimen/sp_18"

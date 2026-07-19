@@ -108,10 +108,13 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/siv_user"
-                android:layout_width="@dimen/dp_30"
-                android:layout_height="@dimen/dp_30"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
                 android:scaleType="centerCrop"
                 android:layout_marginBottom="@dimen/dp_10"
+                app:strokeColor="@color/white"
+                app:strokeWidth="@dimen/dp_2"
+                android:padding="@dimen/dp_2"
                 app:layout_constraintEnd_toStartOf="@+id/tv_name"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="packed"
@@ -129,7 +132,7 @@
                 android:maxEms="9"
                 android:singleLine="true"
                 android:textColor="@color/white"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_22"
                 app:layout_constraintBottom_toBottomOf="@+id/siv_user"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/siv_user"
@@ -150,31 +153,24 @@
                     android:id="@+id/sll_online"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_4"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingVertical="@dimen/dp_2"
-                    android:paddingStart="@dimen/dp_7"
-                    android:paddingEnd="@dimen/dp_7"
-                    app:layout_constraintEnd_toStartOf="@+id/view"
-                    app:layout_constraintTop_toBottomOf="@+id/siv_user"
-                    app:shape_radius="@dimen/dp_13"
-                    app:shape_solidColor="#cf3BD800">
-
-                    <com.hjq.shape.view.ShapeView
-                        android:layout_width="@dimen/dp_6"
-                        android:layout_height="@dimen/dp_6"
-                        app:shape_radius="@dimen/dp_6"
-                        app:shape_solidColor="@color/white" />
+                    android:paddingVertical="@dimen/dp_7"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    app:layout_constraintStart_toStartOf="@+id/tv_name"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                    app:shape_radius="@dimen/dp_8"
+                    app:shape_solidColor="@color/color_7FEA04">
 
                     <TextView
                         android:id="@+id/tv_online"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dp_4"
                         android:text="Online"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/sp_10"
-                      />
+                        android:textStyle="bold"
+                        android:textColor="@color/firstTextColor"
+                        android:textSize="@dimen/sp_12" />
 
                 </com.hjq.shape.layout.ShapeLinearLayout>
 
@@ -183,33 +179,33 @@
                     android:id="@+id/sll_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp_7"
+                    android:layout_marginStart="@dimen/dp_8"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingVertical="@dimen/dp_2"
-                    android:paddingStart="@dimen/dp_7"
-                    android:paddingEnd="@dimen/dp_7"
+                    android:paddingVertical="@dimen/dp_7"
+                    android:paddingHorizontal="@dimen/dp_8"
                     app:layout_constraintStart_toEndOf="@+id/sll_online"
                     app:layout_constraintTop_toTopOf="@+id/sll_online"
-                    app:shape_radius="@dimen/dp_13"
-                    app:shape_solidColor="@color/color_BB46EB">
+                    app:shape_radius="@dimen/dp_8"
+                    app:shape_solidColor="@color/color_FF8032">
 
                     <ImageView
-                        android:layout_width="@dimen/dp_7"
-                        android:layout_height="@dimen/dp_9"
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="@dimen/dp_12"
                         android:src="@drawable/iv_location" />
 
                     <TextView
                         android:id="@+id/tv_address"
-                        android:text="Nearby"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp_4"
+                        android:text="Nearby"
+                        android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sp_10"
-                         />
+                        android:textSize="@dimen/sp_12" />
 
                 </com.hjq.shape.layout.ShapeLinearLayout>
+
 
             </LinearLayout>
 
@@ -246,13 +242,14 @@
                 android:gravity="center"
                 android:layout_marginBottom="@dimen/dp_25"
                 android:orientation="horizontal"
-                android:paddingVertical="@dimen/dp_18"
+                android:paddingVertical="@dimen/dp_20"
                 android:text="Start Flash Chat Now"
-                android:textColor="@color/white"
+                android:textColor="@color/firstTextColor"
                 android:textSize="@dimen/sp_18"
                 app:shape_radius="@dimen/dp_29"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:shape_solidColor="@color/color_EAA82B">
+                app:shape_solidGradientStartColor="@color/startGradientColor"
+                app:shape_solidGradientEndColor="@color/endGradientColor">
 
             </com.hjq.shape.view.ShapeTextView>
 

@@ -55,7 +55,7 @@ class LikeItemAdapter : BaseRecyclerAdapter<ModelUserData, ItemILikeBinding>(Ite
 
                 tvOnline.text = if (item.onlineStatus == "Online") "Online" else "Active"
 
-                tvContent.text = item.aim.replaceEmoji()
+//                tvContent.text = item.aim.replaceEmoji()
 
                 (holder.extra["mILikeImageAdapter"] as ILikeImageAdapter).submitList(item.coverPics?.map {
                     ILikeImageData(item.userId,it)

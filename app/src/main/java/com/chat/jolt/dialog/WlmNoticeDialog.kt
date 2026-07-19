@@ -87,7 +87,7 @@ class WlmNoticeDialog: BaseDialog<DialogWlmNoticeBinding>(DialogWlmNoticeBinding
     }
 
     override fun setDialogWidth(): Int {
-        return getScreenPx(requireContext())[0]*9/10
+        return getScreenPx(requireContext())[0]*8/10
     }
 
     override fun setDialogGravity(): Int {

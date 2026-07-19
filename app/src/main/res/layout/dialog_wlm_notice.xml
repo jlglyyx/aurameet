@@ -1,166 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hjq.shape.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
-    app:shape_solidColor="@color/color_FFF7F3"
-    app:shape_radius="@dimen/dp_20"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="vertical">
+
+    <com.hjq.shape.layout.ShapeLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_5"
+        android:layout_marginTop="-20dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/iv_close"
+        app:shape_radius="@dimen/dp_20"
+        app:shape_solidColor="@color/color_F8F1E9">
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="@dimen/dp_105"
+            android:layout_height="@dimen/dp_105"
+            android:padding="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_24"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearance="@style/circleStyle"
+            app:strokeColor="@color/white"
+            app:strokeWidth="@dimen/dp_2" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_8"
+            android:textColor="@color/firstTextColor"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@+id/siv_user">
+
+            <com.hjq.shape.layout.ShapeLinearLayout
+                android:id="@+id/sll_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dp_8"
+                android:paddingVertical="@dimen/dp_7"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                app:shape_radius="@dimen/dp_8"
+                app:shape_solidColor="@color/color_7FEA04">
+
+                <TextView
+                    android:id="@+id/tv_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Online"
+                    android:textColor="@color/firstTextColor"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+            </com.hjq.shape.layout.ShapeLinearLayout>
+
+
+            <com.hjq.shape.layout.ShapeLinearLayout
+                android:id="@+id/sll_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_8"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dp_8"
+                android:paddingVertical="@dimen/dp_7"
+                app:layout_constraintStart_toEndOf="@+id/sll_online"
+                app:layout_constraintTop_toTopOf="@+id/sll_online"
+                app:shape_radius="@dimen/dp_8"
+                app:shape_solidColor="@color/color_FF8032">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_12"
+                    android:layout_height="@dimen/dp_12"
+                    android:src="@drawable/iv_location" />
+
+                <TextView
+                    android:id="@+id/tv_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:text="Nearby"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_12"
+                    android:textStyle="bold" />
+
+            </com.hjq.shape.layout.ShapeLinearLayout>
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_25"
+            android:ellipsize="end"
+            android:maxEms="9"
+            android:singleLine="true"
+            android:src="@drawable/iv_wlm_text"
+            android:text="Who Likes Me"
+            android:textColor="@color/firstTextColor"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_15"
+            android:layout_marginTop="@dimen/dp_6"
+            android:gravity="center"
+            android:text="You‘ve got a new likes right now.Don't miss the crush"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/sp_16" />
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/stv_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_25"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_25"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_20"
+            android:text="See Who Likes You"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:shape_radius="@dimen/dp_25"
+            app:shape_solidGradientEndColor="@color/color_D438FF"
+            app:shape_solidGradientStartColor="@color/color_FFBC48"
+            app:shape_solidPressedColor="@color/pressed_color_light" />
+
+    </com.hjq.shape.layout.ShapeLinearLayout>
+
 
     <ImageView
         android:id="@+id/iv_close"
         android:layout_width="@dimen/dp_40"
         android:layout_height="@dimen/dp_40"
         android:layout_gravity="end"
-        android:layout_marginTop="@dimen/dp_10"
-        android:layout_marginEnd="@dimen/dp_10"
-        android:padding="@dimen/dp_8"
-        android:src="@drawable/iv_close_wlm" />
-
-
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/iv_avatar"
-        android:layout_width="@dimen/dp_105"
-        android:layout_height="@dimen/dp_105"
         android:padding="@dimen/dp_2"
-        android:layout_marginTop="-10dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:shapeAppearance="@style/circleStyle"
-        app:strokeColor="@color/white"
-        app:strokeWidth="@dimen/dp_2" />
-
-    <TextView
-        android:id="@+id/tv_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/dp_10"
-        android:layout_marginTop="@dimen/dp_8"
-        android:textStyle="bold"
-        android:textColor="@color/color_151515"
-        android:textSize="@dimen/sp_18"
-    />
-
-
-    <LinearLayout
-        android:id="@+id/ll_status"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:gravity="center"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/siv_user">
-
-        <com.hjq.shape.layout.ShapeLinearLayout
-            android:id="@+id/sll_online"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingVertical="@dimen/dp_2"
-            android:paddingStart="@dimen/dp_7"
-            android:paddingEnd="@dimen/dp_7"
-            app:layout_constraintEnd_toStartOf="@+id/view"
-            app:layout_constraintTop_toBottomOf="@+id/siv_user"
-            app:shape_radius="@dimen/dp_13"
-            app:shape_solidColor="#cf3BD800">
-
-            <com.hjq.shape.view.ShapeView
-                android:layout_width="@dimen/dp_6"
-                android:layout_height="@dimen/dp_6"
-                app:shape_radius="@dimen/dp_6"
-                app:shape_solidColor="@color/white" />
-
-            <TextView
-                android:id="@+id/tv_online"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_4"
-                android:text="Online"
-                android:textColor="@color/white"
-                android:textSize="@dimen/sp_10"
-                />
-
-        </com.hjq.shape.layout.ShapeLinearLayout>
-
-
-        <com.hjq.shape.layout.ShapeLinearLayout
-            android:id="@+id/sll_address"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp_7"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingVertical="@dimen/dp_2"
-            android:paddingStart="@dimen/dp_7"
-            android:paddingEnd="@dimen/dp_7"
-            app:layout_constraintStart_toEndOf="@+id/sll_online"
-            app:layout_constraintTop_toTopOf="@+id/sll_online"
-            app:shape_radius="@dimen/dp_13"
-            app:shape_solidColor="@color/color_BB46EB">
-
-            <ImageView
-                android:layout_width="@dimen/dp_7"
-                android:layout_height="@dimen/dp_9"
-                android:src="@drawable/iv_location" />
-
-            <TextView
-                android:id="@+id/tv_address"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_4"
-                android:textColor="@color/white"
-                android:text="Nearby"
-                android:textSize="@dimen/sp_10"
-                />
-
-        </com.hjq.shape.layout.ShapeLinearLayout>
-
-    </LinearLayout>
-
-
-    <ImageView
-        android:layout_width="@dimen/dp_188"
-        android:layout_height="@dimen/dp_32"
-        android:layout_marginHorizontal="@dimen/dp_10"
-        android:ellipsize="end"
-        android:layout_marginTop="@dimen/dp_25"
-        android:fontFamily="@font/arial_black"
-        android:maxEms="9"
-        android:src="@drawable/iv_wlm_text"
-        android:text="Who Likes Me"
-        android:singleLine="true"
-        android:textColor="@color/color_151515"
-        android:textSize="@dimen/sp_28"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/dp_15"
-        android:layout_marginTop="@dimen/dp_6"
-        android:gravity="center"
-        android:text="You‘ve got a new likes right now.Don't miss the crush"
-        android:textColor="@color/color_999999"
-        android:textSize="@dimen/sp_16"
-        />
-
-    <com.hjq.shape.view.ShapeTextView
-        android:id="@+id/stv_confirm"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/dp_25"
-        android:layout_marginTop="@dimen/dp_20"
-        android:layout_marginBottom="@dimen/dp_25"
-        android:gravity="center"
-        android:paddingVertical="@dimen/dp_14"
-        android:text="See Who Likes You"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_16"
-        android:textStyle="bold"
-        app:shape_radius="@dimen/dp_25"
-        app:shape_solidColor="@color/color_button"
-        app:shape_solidPressedColor="@color/pressed_color_light" />
-
-</com.hjq.shape.layout.ShapeLinearLayout>
+        android:src="@drawable/iv_close_swip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
