@@ -8,9 +8,10 @@
     android:orientation="vertical"
     app:shape_radiusInTopLeft="@dimen/dp_22"
     app:shape_radiusInTopRight="@dimen/dp_22"
-    app:shape_solidGradientEndColor="@color/appColor"
-    app:shape_solidGradientOrientation="topToBottom"
-    app:shape_solidGradientStartColor="@color/appColor">
+    app:shape_solidGradientStartColor="@color/color_251126"
+    app:shape_solidGradientEndColor="@color/color_161616"
+    app:shape_solidGradientOrientation="bottomToTop"
+  >
 
 
 
@@ -40,21 +41,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sll_container"
-        app:shape_solidColor="@color/color_36343A"
         android:layout_marginHorizontal="@dimen/dp_15"
         app:shape_radius="@dimen/dp_15"
         android:paddingVertical="@dimen/dp_15"
         android:layout_marginTop="@dimen/dp_10"
         app:layout_constraintTop_toBottomOf="@+id/iv_image"
         android:orientation="vertical">
-        <ImageView
-            android:id="@+id/iv_retain_1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/iv_retain_1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/iv_image" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
@@ -67,7 +60,7 @@
 
 
 
-    <com.hjq.shape.view.ShapeTextView
+    <TextView
         android:id="@+id/stv_confirm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -77,14 +70,13 @@
         android:gravity="center"
         android:paddingVertical="@dimen/dp_14"
         android:text="Continue"
-        android:textColor="@color/white"
+        android:textColor="@color/color_563500"
         android:textSize="@dimen/sp_16"
         android:textStyle="bold"
-        app:shape_radius="@dimen/dp_25"
+        android:background="@drawable/iv_b_open_vip_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sll_container"
-        app:shape_solidColor="@color/color_EAA82B"
-        app:shape_solidPressedColor="@color/pressed_color_light" />
+    />
 
 
     <ImageView
@@ -93,10 +85,8 @@
         android:layout_height="@dimen/dp_40"
         android:layout_gravity="end"
         android:layout_marginTop="@dimen/dp_10"
-        android:layout_marginEnd="@dimen/dp_10"
-        android:padding="@dimen/dp_8"
         app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/iv_close_filter"
+        android:src="@drawable/iv_retain_close"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </com.hjq.shape.layout.ShapeConstraintLayout>

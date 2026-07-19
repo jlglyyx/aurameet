@@ -1,12 +1,14 @@
 package com.chat.jolt.dialog
 
 import android.view.Gravity
+import com.chat.jolt.databinding.DialogLoginOutBinding
 import com.chat.jolt.databinding.DialogNoticeBinding
 import com.chat.lib_common.dialog.BaseDialog
 import com.chat.lib_common.util.click
+import com.chat.lib_common.util.edgeToEdgeBottom
 import com.chat.lib_common.util.getScreenPx
 
-class NoticeDialog: BaseDialog<DialogNoticeBinding>(DialogNoticeBinding::inflate) {
+class LoginOutDialog: BaseDialog<DialogLoginOutBinding>(DialogLoginOutBinding::inflate) {
 
     var onConfirm: (() -> Unit)? = null
 
@@ -16,6 +18,8 @@ class NoticeDialog: BaseDialog<DialogNoticeBinding>(DialogNoticeBinding::inflate
     override fun initView() {
 
         withViewBinding {
+
+            root.edgeToEdgeBottom()
 
             tvCancel.click {
 
@@ -38,12 +42,10 @@ class NoticeDialog: BaseDialog<DialogNoticeBinding>(DialogNoticeBinding::inflate
 
     }
 
-    override fun setDialogWidth(): Int {
-        return getScreenPx(requireContext())[0]*8/10
-    }
+
 
     override fun setDialogGravity(): Int {
-        return Gravity.CENTER
+        return Gravity.BOTTOM
     }
 
 

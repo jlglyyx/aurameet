@@ -28,7 +28,7 @@ class OpenNoticeDialog: BaseDialog<DialogOpenNoticeBinding>(DialogOpenNoticeBind
                 dismissAllowingStateLoss()
             }
 
-            ivClose.click {
+            stvCancel.click {
 
                 reportEvent(true)
 

@@ -172,58 +172,27 @@ object FloatingWindowUtil {
                 val mFloatMessageBinding =
                     FloatMessageBinding.inflate(LayoutInflater.from(context))
 
-                when (cmdMessageExtraData.eventCode){
-
-                    AppConstant.RIMConstant.CMD_MATCH_SUCCESS ->{
-
-//                        mFloatMessageBinding.sclContainer.shapeDrawableBuilder.setSolidColor(ColorUtils.getColor(
-//                            R.color.color_FF9999
-//                        )).intoBackground()
-//                        mFloatMessageBinding.clContainer.shapeDrawableBuilder.setSolidColor(ColorUtils.getColor(
-//                            R.color.color_FFCCCC
-//                        )).intoBackground()
-//
-//                        mFloatMessageBinding.tvTitle.text = "New Match"
-//
-//                        reportEvent()
-                    }
-                    AppConstant.RIMConstant.CMD_NEW_VISITOR ->{
-
-//                        mFloatMessageBinding.sclContainer.shapeDrawableBuilder.setSolidColor(ColorUtils.getColor(
-//                            R.color.color_FF8CCA
-//                        )).intoBackground()
-//                        mFloatMessageBinding.clContainer.shapeDrawableBuilder.setSolidColor(ColorUtils.getColor(
-//                            R.color.color_FFC6E5
-//                        )).intoBackground()
-//
-//                        mFloatMessageBinding.tvTitle.text = "New Visitor"
-
-
-                    }
-
-                }
 
                 mFloatMessageBinding.ivAvatar.loadImage(
                     BaseApplication.mApplication,
                     messageExtraData.headPic2
                 )
 
-
                 mFloatMessageBinding.tvName.text = messageExtraData.name2
 
                 if (cmdMessageExtraData.eventCode == AppConstant.RIMConstant.CMD_MATCH_SUCCESS){
 
-                    mFloatMessageBinding.sclContainer.shapeDrawableBuilder.setSolidColor(ColorUtils.getColor(
-                        R.color.color_FF9090
-                    )).intoBackground()
-                    mFloatMessageBinding.clContainer.shapeDrawableBuilder.setSolidColor(ColorUtils.getColor(
-                        R.color.color_FFCCCC
-                    )).intoBackground()
-                    mFloatMessageBinding.tvTitle.shapeDrawableBuilder.setSolidColor(ColorUtils.getColor(
-                        R.color.color_FF6666
-                    )).intoBackground()
+                    mFloatMessageBinding.clContainer.setBackgroundResource(R.drawable.iv_new_match_bg)
 
                     mFloatMessageBinding.tvTitle.text = "New Match"
+
+                    mFloatMessageBinding.tvTitle.setCompoundDrawablesWithIntrinsicBounds(
+                        R.drawable.iv_new_match_tag,
+                        0,
+                        0,
+                        0
+                    )
+
                     mFloatMessageBinding.tvMessage.text = "Chat her right here right now"
 
                     reportEvent()
@@ -250,18 +219,16 @@ object FloatingWindowUtil {
                 }else if (cmdMessageExtraData.eventCode == AppConstant.RIMConstant.CMD_NEW_VISITOR){
 
 
-                    mFloatMessageBinding.sclContainer.shapeDrawableBuilder.setSolidColor(ColorUtils.getColor(
-                        R.color.color_FF8CCA
-                    )).intoBackground()
-                    mFloatMessageBinding.clContainer.shapeDrawableBuilder.setSolidColor(ColorUtils.getColor(
-                        R.color.color_FFC6E5
-                    )).intoBackground()
-
-                    mFloatMessageBinding.tvTitle.shapeDrawableBuilder.setSolidColor(ColorUtils.getColor(
-                        R.color.color_FF66C1
-                    )).intoBackground()
+                    mFloatMessageBinding.clContainer.setBackgroundResource(R.drawable.iv_new_visitor_bg)
 
                     mFloatMessageBinding.tvTitle.text = "New Visitor"
+
+                    mFloatMessageBinding.tvTitle.setCompoundDrawablesWithIntrinsicBounds(
+                        R.drawable.iv_new_visitor_tag,
+                        0,
+                        0,
+                        0
+                    )
                     mFloatMessageBinding.tvMessage.text = "She viewed your profile!"
 
 

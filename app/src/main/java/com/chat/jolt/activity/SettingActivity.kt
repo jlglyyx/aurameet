@@ -4,6 +4,7 @@ import android.view.View
 import com.chat.jolt.BuildConfig
 import com.chat.jolt.R
 import com.chat.jolt.databinding.ActSettingBinding
+import com.chat.jolt.dialog.LoginOutDialog
 import com.chat.jolt.dialog.NoticeDialog
 import com.chat.jolt.helper.UserInfoHold
 import com.chat.jolt.helper.UserInfoHold.loginOut
@@ -62,17 +63,7 @@ class SettingActivity : BaseActivity<ActSettingBinding, MainViewModel>(ActSettin
             }
             sllLoginOut.click {
 
-                NoticeDialog().apply {
-
-                    initView = {dialog, mViewBinding ->
-
-                        mViewBinding.tvTitle.visibility = View.GONE
-                        mViewBinding.tvContent.text = "Are you sure you want to log out of this account?"
-                        mViewBinding.tvCancel.text = "Cancel"
-                        mViewBinding.tvCommit.text = "Logout"
-
-
-                    }
+                LoginOutDialog().apply {
 
                     onConfirm = {
 
