@@ -15,7 +15,7 @@
     android:textSize="@dimen/sp_13"
     app:shape_radius="@dimen/dp_20"
     app:shape_strokeSize="@dimen/dp_1"
-    app:shape_strokeColor="@color/color_EAA82B"
-    app:shape_solidColor="@color/color_15EAA82B"
+    app:shape_strokeColor="@color/white"
+    app:shape_solidColor="@color/white_10"
     xmlns:app="http://schemas.android.com/apk/res-auto" />
 </LinearLayout>

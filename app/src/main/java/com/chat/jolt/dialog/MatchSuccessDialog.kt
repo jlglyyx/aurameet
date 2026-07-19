@@ -10,6 +10,7 @@ import android.widget.ImageView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
+import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -145,6 +146,18 @@ class MatchSuccessDialog :
                 setText.setSelection(setText.text.toString().length)
             }
 
+            setText.doAfterTextChanged {
+                if (it.toString().isBlank()) {
+                    setText.isEnabled = false
+                    ivSend.setImageResource(R.drawable.iv_match_un_send)
+                } else {
+                    setText.isEnabled = true
+                    ivSend.setImageResource(R.drawable.iv_match_send)
+                }
+            }
+
+
+
             ivSend.click {
 
                 val text = setText.text.toString().ifBlank { setText.hint.toString() }
@@ -242,8 +255,8 @@ class MatchSuccessDialog :
             banner.setAdapter(mBannerAdapter).addBannerLifecycleObserver(requireActivity())
                 .isAutoLoop(true)
                 .setIndicator(mRectangleIndicator, false)
-                .setIndicatorSelectedColor(getColor(R.color.color_EAA82B))
-                .setIndicatorNormalColor(getColor(R.color.white_30))
+                .setIndicatorSelectedColor(getColor(R.color.color_FA9DFF))
+                .setIndicatorNormalColor(getColor(R.color.white_50))
                 .setIndicatorRadius(5f.dip2px(requireContext()))
                 .setIndicatorHeight(6f.dip2px(requireContext()))
                 .setIndicatorWidth(

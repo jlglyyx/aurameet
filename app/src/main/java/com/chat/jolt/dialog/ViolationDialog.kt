@@ -10,9 +10,9 @@ import com.chat.lib_common.util.edgeToEdgeBottom
 class ViolationDialog: BaseDialog<DialogViolationBinding>(DialogViolationBinding::inflate) {
 
 
-    var onConfirm: () -> Unit = {}
+    var onConfirm: (() -> Unit)? = null
 
-    var onCancel: () -> Unit = {}
+    var onCancel: (() -> Unit)? = null
 
 
     override fun initView() {
@@ -23,14 +23,14 @@ class ViolationDialog: BaseDialog<DialogViolationBinding>(DialogViolationBinding
 
             stvConfirm.click {
 
-                onConfirm()
+                onConfirm?.invoke()
 
                 dismissAllowingStateLoss()
             }
 
             ivClose.click {
 
-                onCancel()
+                onCancel?.invoke()
 
                 dismissAllowingStateLoss()
             }

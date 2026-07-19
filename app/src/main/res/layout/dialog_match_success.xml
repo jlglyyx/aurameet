@@ -106,10 +106,13 @@
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/siv_user"
-                android:layout_width="@dimen/dp_30"
-                android:layout_height="@dimen/dp_30"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36"
                 android:scaleType="centerCrop"
                 android:layout_marginBottom="@dimen/dp_10"
+                app:strokeColor="@color/white"
+                app:strokeWidth="@dimen/dp_2"
+                android:padding="@dimen/dp_2"
                 app:layout_constraintEnd_toStartOf="@+id/tv_name"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintHorizontal_chainStyle="packed"
@@ -127,7 +130,7 @@
                 android:maxEms="9"
                 android:singleLine="true"
                 android:textColor="@color/white"
-                android:textSize="@dimen/sp_18"
+                android:textSize="@dimen/sp_22"
                 app:layout_constraintBottom_toBottomOf="@+id/siv_user"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/siv_user"
@@ -154,28 +157,21 @@
                     android:layout_marginEnd="@dimen/dp_4"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingVertical="@dimen/dp_2"
-                    android:paddingStart="@dimen/dp_7"
-                    android:paddingEnd="@dimen/dp_7"
+                    android:paddingVertical="@dimen/dp_7"
+                    android:paddingHorizontal="@dimen/dp_8"
                     app:layout_constraintStart_toStartOf="@+id/tv_name"
                     app:layout_constraintTop_toBottomOf="@+id/tv_name"
-                    app:shape_radius="@dimen/dp_13"
-                    app:shape_solidColor="#cf3BD800">
-
-                    <com.hjq.shape.view.ShapeView
-                        android:layout_width="@dimen/dp_6"
-                        android:layout_height="@dimen/dp_6"
-                        app:shape_radius="@dimen/dp_6"
-                        app:shape_solidColor="@color/white" />
+                    app:shape_radius="@dimen/dp_8"
+                    app:shape_solidColor="@color/color_7FEA04">
 
                     <TextView
                         android:id="@+id/tv_online"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dp_5"
                         android:text="Online"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/sp_10" />
+                        android:textStyle="bold"
+                        android:textColor="@color/firstTextColor"
+                        android:textSize="@dimen/sp_12" />
 
                 </com.hjq.shape.layout.ShapeLinearLayout>
 
@@ -186,17 +182,16 @@
                     android:layout_marginStart="@dimen/dp_8"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingVertical="@dimen/dp_2"
-                    android:paddingStart="@dimen/dp_7"
-                    android:paddingEnd="@dimen/dp_7"
+                    android:paddingVertical="@dimen/dp_7"
+                    android:paddingHorizontal="@dimen/dp_8"
                     app:layout_constraintStart_toEndOf="@+id/sll_online"
                     app:layout_constraintTop_toTopOf="@+id/sll_online"
-                    app:shape_radius="@dimen/dp_13"
-                    app:shape_solidColor="@color/color_D97CFF">
+                    app:shape_radius="@dimen/dp_8"
+                    app:shape_solidColor="@color/color_FF8032">
 
                     <ImageView
-                        android:layout_width="@dimen/dp_7"
-                        android:layout_height="@dimen/dp_9"
+                        android:layout_width="@dimen/dp_12"
+                        android:layout_height="@dimen/dp_12"
                         android:src="@drawable/iv_location" />
 
                     <TextView
@@ -205,8 +200,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp_4"
                         android:text="Nearby"
+                        android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sp_10" />
+                        android:textSize="@dimen/sp_12" />
 
                 </com.hjq.shape.layout.ShapeLinearLayout>
 
@@ -243,58 +239,77 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/dp_25"
                 android:orientation="horizontal"
-                android:layout_marginBottom="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_20"
                 app:layout_constraintBottom_toTopOf="@+id/fl_view_container">
 
-                <TextView
+                <com.hjq.shape.view.ShapeTextView
                     android:id="@+id/tv_1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="😈"
+                    android:text="🥰"
+                    android:paddingVertical="@dimen/dp_8"
+                    app:shape_radius="@dimen/dp_20"
+                    app:shape_solidColor="@color/white_20"
                     android:textColor="@color/color_151515"
-                    android:textSize="@dimen/sp_36" />
+                    android:textSize="@dimen/sp_24" />
 
-                <TextView
+                <com.hjq.shape.view.ShapeTextView
                     android:id="@+id/tv_2"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="😘"
+                    android:text="👋"
+                    android:layout_marginHorizontal="@dimen/dp_10"
+                    android:paddingVertical="@dimen/dp_8"
+                    app:shape_radius="@dimen/dp_20"
+                    app:shape_solidColor="@color/white_20"
                     android:textColor="@color/color_151515"
-                    android:textSize="@dimen/sp_36" />
+                    android:textSize="@dimen/sp_24"/>
 
-                <TextView
+                <com.hjq.shape.view.ShapeTextView
                     android:id="@+id/tv_3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="❤️"
+                    android:paddingVertical="@dimen/dp_8"
+                    app:shape_radius="@dimen/dp_20"
+                    app:shape_solidColor="@color/white_20"
                     android:textColor="@color/color_151515"
-                    android:textSize="@dimen/sp_36" />
+                    android:textSize="@dimen/sp_24"/>
 
-                <TextView
+                <com.hjq.shape.view.ShapeTextView
                     android:id="@+id/tv_4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
                     android:text="😍"
+                    android:layout_marginHorizontal="@dimen/dp_10"
+                    android:paddingVertical="@dimen/dp_8"
+                    app:shape_radius="@dimen/dp_20"
+                    app:shape_solidColor="@color/white_20"
                     android:textColor="@color/color_151515"
-                    android:textSize="@dimen/sp_36" />
+                    android:textSize="@dimen/sp_24"
+                   />
 
-                <TextView
+                <com.hjq.shape.view.ShapeTextView
                     android:id="@+id/tv_5"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="💋"
+                    android:text="😘"
+                    android:paddingVertical="@dimen/dp_8"
+                    app:shape_radius="@dimen/dp_20"
+                    app:shape_solidColor="@color/white_20"
                     android:textColor="@color/color_151515"
-                    android:textSize="@dimen/sp_36" />
+                    android:textSize="@dimen/sp_24"
+                 />
 
             </LinearLayout>
 
@@ -334,9 +349,8 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="@dimen/dp_10"
                 android:paddingVertical="@dimen/dp_5"
-                android:textColor="@color/color_151515"
-                app:shape_radius="@dimen/dp_25"
-                app:shape_solidColor="@color/white">
+                app:shape_radius="@dimen/dp_30"
+                app:shape_solidColor="@color/color_222222">
 
 
                 <com.hjq.shape.view.ShapeEditText
@@ -347,14 +361,14 @@
                     android:hint="send..."
                     android:maxLength="1000"
                     android:singleLine="true"
-                    android:textColor="@color/color_151515"
-                    android:textColorHint="@color/color_151515" />
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white_20" />
 
                 <ImageView
                     android:id="@+id/iv_send"
-                    android:layout_width="@dimen/dp_40"
-                    android:layout_height="@dimen/dp_40"
-                    android:src="@drawable/iv_match_send" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/iv_match_un_send" />
 
             </com.hjq.shape.layout.ShapeLinearLayout>
 

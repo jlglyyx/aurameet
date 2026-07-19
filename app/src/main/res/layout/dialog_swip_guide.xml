@@ -1,58 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hjq.shape.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingHorizontal="@dimen/dp_20"
-    android:paddingVertical="@dimen/dp_20"
-    app:shape_radius="@dimen/dp_20"
     android:gravity="center_horizontal"
-    app:shape_solidColor="@color/color_FFF7F3">
+    android:orientation="vertical">
 
-
-    <TextView
-        android:id="@+id/tv_title"
+    <com.hjq.shape.layout.ShapeLinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Swipe Right to Match"
-        android:textColor="@color/color_151515"
-        android:textSize="@dimen/sp_18"
-        android:textStyle="bold" />
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="-20dp"
+        android:layout_marginHorizontal="@dimen/dp_5"
+        app:layout_constraintTop_toBottomOf="@+id/iv_close"
+        android:paddingHorizontal="@dimen/dp_20"
+        android:paddingVertical="@dimen/dp_20"
+        app:shape_radius="@dimen/dp_20"
+        app:shape_solidColor="@color/color_FFF7F3">
 
-    <TextView
-        android:id="@+id/tv_content"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_10"
-        android:gravity="center"
-        android:lineSpacingExtra="@dimen/dp_3"
-        android:text="Discover your perfect match &amp; start something special 👅"
-        android:textColor="@color/color_999999"
-        android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Swipe Right to Match"
+            android:textColor="@color/firstTextColor"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/dp_3"
+            android:text="Discover your perfect match &amp; start something special 👅"
+            android:textColor="@color/color_888888"
+            android:textSize="@dimen/sp_16" />
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_15"
+            android:src="@drawable/iv_swipe_notice" />
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_20"
+            android:text="Let's Go!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:shape_radius="@dimen/dp_30"
+            app:shape_solidGradientEndColor="@color/color_D438FF"
+            app:shape_solidGradientStartColor="@color/color_FFBC48"
+            app:shape_solidPressedColor="@color/pressed_color_dark" />
+
+    </com.hjq.shape.layout.ShapeLinearLayout>
 
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_15"
-        android:src="@drawable/iv_i_like_empty"/>
-
-
-    <com.hjq.shape.view.ShapeTextView
-        android:id="@+id/tv_commit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:enabled="true"
-        android:gravity="center"
-        android:paddingVertical="@dimen/dp_14"
-        android:text="Let's Go!"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_16"
-        app:shape_radius="@dimen/dp_25"
-        app:shape_solidColor="@color/color_EAA82B"
-        app:shape_solidPressedColor="@color/pressed_color_dark" />
-
-</com.hjq.shape.layout.ShapeLinearLayout>
+        android:id="@+id/iv_close"
+        android:layout_gravity="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:padding="@dimen/dp_2"
+        android:src="@drawable/iv_close_swip" />
+</androidx.constraintlayout.widget.ConstraintLayout>

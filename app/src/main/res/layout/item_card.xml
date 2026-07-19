@@ -81,8 +81,10 @@
         android:id="@+id/iv_like_status"
         android:layout_width="@dimen/dp_100"
         android:layout_height="@dimen/dp_100"
-        android:src="@drawable/iv_like_status"
         android:visibility="gone"
+        android:src="@drawable/iv_like_status"
+        app:layout_constraintEnd_toEndOf="@+id/fl_container"
+        app:layout_constraintBottom_toBottomOf="@+id/fl_container"
         app:layout_constraintStart_toStartOf="@id/fl_container"
         app:layout_constraintTop_toTopOf="@id/fl_container" />
 
@@ -90,9 +92,11 @@
         android:id="@+id/iv_dislike_status"
         android:layout_width="@dimen/dp_100"
         android:layout_height="@dimen/dp_100"
-        android:src="@drawable/iv_dislike_status"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@id/fl_container"
+        android:src="@drawable/iv_dislike_status"
+        app:layout_constraintEnd_toEndOf="@+id/fl_container"
+        app:layout_constraintBottom_toBottomOf="@+id/fl_container"
+        app:layout_constraintStart_toStartOf="@id/fl_container"
         app:layout_constraintTop_toTopOf="@id/fl_container" />
 
 
@@ -128,7 +132,7 @@
             android:fontFamily="@font/arial_black"
             android:singleLine="true"
             android:textColor="@color/white"
-            android:textSize="@dimen/sp_20"
+            android:textSize="@dimen/sp_22"
             app:layout_constraintEnd_toStartOf="@+id/iv_to_info"
             app:layout_constraintStart_toEndOf="@+id/iv_avatar"
             app:layout_constraintTop_toTopOf="parent" />
@@ -152,25 +156,19 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingHorizontal="@dimen/dp_8"
-            android:paddingVertical="@dimen/dp_4"
+            android:paddingVertical="@dimen/dp_7"
             app:layout_constraintStart_toStartOf="@+id/tv_name"
             app:layout_constraintTop_toBottomOf="@+id/tv_name"
-            app:shape_radius="@dimen/dp_13"
-            app:shape_solidColor="#cf3BD800">
-
-            <com.hjq.shape.view.ShapeView
-                android:layout_width="@dimen/dp_10"
-                android:layout_height="@dimen/dp_10"
-                app:shape_radius="@dimen/dp_6"
-                app:shape_solidColor="@color/white" />
+            app:shape_radius="@dimen/dp_8"
+            app:shape_solidColor="@color/color_7FEA04">
 
             <TextView
                 android:id="@+id/tv_online"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/dp_6"
+                android:textStyle="bold"
                 android:text="Online"
-                android:textColor="@color/white"
+                android:textColor="@color/firstTextColor"
                 android:textSize="@dimen/sp_12" />
 
         </com.hjq.shape.layout.ShapeLinearLayout>
@@ -183,11 +181,11 @@
             android:gravity="center"
             android:orientation="horizontal"
             android:paddingHorizontal="@dimen/dp_8"
-            android:paddingVertical="@dimen/dp_4"
+            android:paddingVertical="@dimen/dp_7"
             app:layout_constraintStart_toEndOf="@+id/sll_online"
             app:layout_constraintTop_toTopOf="@+id/sll_online"
-            app:shape_radius="@dimen/dp_13"
-            app:shape_solidColor="@color/color_BB46EB">
+            app:shape_radius="@dimen/dp_8"
+            app:shape_solidColor="@color/color_FF8032">
 
             <ImageView
                 android:layout_width="@dimen/dp_12"
@@ -200,6 +198,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp_4"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:textSize="@dimen/sp_12" />
 
         </com.hjq.shape.layout.ShapeLinearLayout>
@@ -273,7 +272,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shape_radius="@dimen/dp_6"
-                app:shape_solidColor="@color/color_FF5A8C" />
+               />
 
 
         </com.hjq.shape.layout.ShapeConstraintLayout>

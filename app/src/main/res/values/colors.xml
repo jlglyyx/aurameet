@@ -191,6 +191,11 @@
     <color name="color_FDFFD2">#FDFFD2</color>
     <color name="color_1B1B1D">#1B1B1D</color>
     <color name="color_4A4A4A">#4A4A4A</color>
+    <color name="color_7FEA04">#7FEA04</color>
+    <color name="color_FF8032">#FF8032</color>
+    <color name="color_FFBC48">#FFBC48</color>
+    <color name="color_D438FF">#D438FF</color>
+    <color name="color_FA9DFF">#FA9DFF</color>
 
     <color name="firstTextColor">@color/color_151515</color>
     <color name="startGradientColor">@color/color_FFFFB0</color>

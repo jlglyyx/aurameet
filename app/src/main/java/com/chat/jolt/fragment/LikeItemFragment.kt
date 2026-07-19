@@ -5,6 +5,7 @@ import android.view.View
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.chad.library.adapter4.QuickAdapterHelper
 import com.chad.library.adapter4.util.setOnDebouncedItemClick
@@ -148,7 +149,7 @@ class LikeItemFragment :
 
         FlowBus.with(AppConstant.EventConstant.EVENT_IS_BUY_GET_USER_INFO).observe(this) {
 
-            mLikeItemAdapter.openAllImage()
+//            mLikeItemAdapter.openAllImage()
 
             if (UserInfoHold.isVip) {
                 viewVisibility( View.GONE,mViewBinding.sclOpenVip,mViewBinding.svCover)
@@ -186,7 +187,7 @@ class LikeItemFragment :
 
             recyclerView.itemAnimator = null
 
-            recyclerView.layoutManager = GridLayoutManager(context, 2)
+            recyclerView.layoutManager = LinearLayoutManager(context)
 
 
             errorReLoadView.addEmptyView { viewGroup ->

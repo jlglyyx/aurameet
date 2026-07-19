@@ -19,10 +19,10 @@
 
     <ImageView
         android:id="@+id/iv_image"
-        android:layout_width="@dimen/dp_86"
-        android:layout_height="@dimen/dp_86"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp_10"
-        android:src="@drawable/iv_text_violation" />
+        android:src="@drawable/iv_buy_success" />
 
     <com.hjq.shape.view.ShapeTextView
         android:id="@+id/tv_title"
@@ -31,12 +31,12 @@
         android:layout_marginHorizontal="@dimen/dp_20"
         android:layout_marginTop="@dimen/dp_24"
         android:gravity="center"
-        android:text="Never Miss New Match"
+        android:text="Purchase successful"
         android:textColor="@color/white"
         android:textSize="@dimen/sp_18"
         app:shape_textStartColor="@color/startGradientColor"
         app:shape_textEndColor="@color/endGradientColor"
-        android:textStyle="bold" />
+        android:textStyle="bold|italic" />
 
     <TextView
         android:id="@+id/tv_content"
@@ -58,7 +58,7 @@
         android:layout_marginBottom="@dimen/dp_25"
         android:gravity="center"
         android:paddingVertical="@dimen/dp_20"
-        android:text="I Know"
+        android:text="Got it！"
         android:textColor="@color/firstTextColor"
         android:textSize="@dimen/sp_18"
         android:textStyle="bold"

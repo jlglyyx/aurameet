@@ -30,7 +30,6 @@ import com.chat.jolt.databinding.ViewCardNoTimeBinding
 import com.chat.jolt.databinding.ViewNoNetworkBinding
 import com.chat.jolt.dialog.BuyRightDialog
 import com.chat.jolt.dialog.ExposureDialog
-import com.chat.jolt.dialog.FilterCardDialog
 import com.chat.jolt.dialog.FlashSuccessDialog
 import com.chat.jolt.dialog.QuickFlashDialog
 import com.chat.jolt.dialog.BuyVipDialog
@@ -127,12 +126,6 @@ class MainFragment : BaseFragment<FraMainBinding, MainViewModel>(FraMainBinding:
 
         withViewBinding {
 
-
-            ivFilter.click {
-
-                initFilterModelDialog()
-
-            }
 
             ivLogo.setOnLongClickListener {
 
@@ -234,7 +227,6 @@ class MainFragment : BaseFragment<FraMainBinding, MainViewModel>(FraMainBinding:
                     mViewModel.mNoCardStatus.postValue(true)
                 } else {
 
-                    mViewBinding.ivFilter.visibility = View.VISIBLE
                 }
 
 
@@ -314,7 +306,6 @@ class MainFragment : BaseFragment<FraMainBinding, MainViewModel>(FraMainBinding:
 
                 mViewModel.getModelCard(distant, minAge, maxAge, sexType, hobbyTags)
 
-                mViewBinding.ivFilter.visibility = View.GONE
 
                 mViewBinding.errorReLoadView.showStatusView(ErrorReLoadView.Status.ERROR)
             }
@@ -904,30 +895,7 @@ class MainFragment : BaseFragment<FraMainBinding, MainViewModel>(FraMainBinding:
     }
 
 
-    private fun initFilterModelDialog() {
 
-        val mFilterCardDialog =
-            FilterCardDialog.newInstance(distant, minAge, maxAge, sexType, hobbyTags)
-
-        mFilterCardDialog?.let {
-
-            it.onConfirm =
-                { distant: Int, minAge: Int, maxAge: Int, sexType: String, hobbyTags: MutableList<String> ->
-
-                    this.distant = distant
-                    this.minAge = minAge
-                    this.maxAge = maxAge
-                    this.sexType = sexType
-                    this.hobbyTags = hobbyTags
-                    isRefresh = true
-                    mViewModel.getModelCard(distant, minAge, maxAge, sexType, hobbyTags)
-                }
-
-            it.show(parentFragmentManager)
-
-        }
-        reportEvent(mPopPopupDialogKey[1], true)
-    }
 
 
     private fun initExposureDialog() {

@@ -12,8 +12,7 @@
     <com.hjq.shape.layout.ShapeConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:shape_radius="@dimen/dp_15"
-        app:shape_solidColor="@color/color_F1CBBF">
+        >
 
         <com.google.android.material.imageview.ShapeableImageView
             app:shapeAppearance="@style/RadiusStyle_15"
@@ -27,9 +26,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Not Free Match Left"
-            android:textColor="@color/color_151515"
-            android:textSize="@dimen/sp_15"
-            android:layout_marginTop="@dimen/dp_15"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:fontFamily="@font/rany_b"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -38,29 +39,30 @@
             android:id="@+id/tv_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginTop="@dimen/dp_8"
             android:gravity="center"
             android:layout_marginHorizontal="@dimen/dp_15"
             android:text="We Provide limited connections for free users and more access with a Subscription"
-            android:textColor="@color/color_555555"
+            android:textColor="@color/white"
             android:textSize="@dimen/sp_13"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_0" />
 
 
-        <com.hjq.shape.view.ShapeTextView
+        <TextView
             android:id="@+id/stv_match"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_16"
             android:gravity="center"
             android:paddingHorizontal="@dimen/dp_34"
             android:paddingVertical="@dimen/dp_8"
             android:text="Get  Match Now"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_13"
+            android:textColor="@color/color_563500"
+            android:textSize="@dimen/sp_16"
             android:textStyle="bold"
+            android:background="@drawable/iv_match_vip_bg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_1"
@@ -72,10 +74,10 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_16"
         android:gravity="center"
         android:text="Nearby/online people are matching"
-        android:textColor="@color/color_E70614"
+        android:textColor="@color/white"
         android:textSize="@dimen/sp_13"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,6 +90,9 @@
         android:layout_height="match_parent"
         android:layout_marginTop="@dimen/dp_15"
         android:overScrollMode="never"
+        tools:itemCount="2"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
         tools:listitem="@layout/item_no_card" />
 
 
