@@ -4,17 +4,20 @@ import android.view.View
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
+import com.chat.jolt.BuildConfig
 import com.chat.jolt.R
+import com.chat.jolt.activity.DeleteAccountActivity
 import com.chat.jolt.activity.EditUserInfoActivity
 import com.chat.jolt.activity.FeedBackActivity
-import com.chat.jolt.activity.SettingActivity
 import com.chat.jolt.activity.VisitorActivity
+import com.chat.jolt.activity.WebActivity
 import com.chat.jolt.data.UserInfoData
 import com.chat.jolt.data.VipData
 import com.chat.jolt.databinding.FraMineBinding
 import com.chat.jolt.dialog.AlbumNoticeDialog
 import com.chat.jolt.dialog.BuyRightDialog
 import com.chat.jolt.dialog.BuyVipDialog
+import com.chat.jolt.dialog.LoginOutDialog
 import com.chat.jolt.dialog.SendMediaDialog
 import com.chat.jolt.helper.UserInfoHold
 import com.chat.jolt.viewmodel.UserViewModel
@@ -22,11 +25,15 @@ import com.chat.lib_common.bus.FlowBus
 import com.chat.lib_common.bus.FlowBus.observe
 import com.chat.lib_common.constant.AppConstant
 import com.chat.lib_common.fragment.BaseFragment
+import com.chat.lib_common.tracking.mMessageUserKey
 import com.chat.lib_common.tracking.mRightShowValue
 import com.chat.lib_common.tracking.mVipShowValue
+import com.chat.lib_common.tracking.reportEvent
 import com.chat.lib_common.util.click
+import com.chat.lib_common.util.copyContent
 import com.chat.lib_common.util.createIntent
 import com.chat.lib_common.util.dip2px
+import com.chat.lib_common.util.edgeToEdgeBottom
 import com.chat.lib_common.util.getTimeSecond
 import com.chat.lib_common.util.loadImage
 import com.chat.lib_common.util.startActivity
@@ -60,7 +67,7 @@ class MineFragment : BaseFragment<FraMineBinding, UserViewModel>(FraMineBinding:
                 requireContext().createIntent(EditUserInfoActivity::class.java)
                     .startActivity(requireContext())
             }
-            sllEdit.click {
+            ivEdit.click {
 
                 requireContext().createIntent(EditUserInfoActivity::class.java)
                     .startActivity(requireContext())
@@ -75,11 +82,7 @@ class MineFragment : BaseFragment<FraMineBinding, UserViewModel>(FraMineBinding:
                     .startActivity(requireContext())
             }
 
-            ivSetting.click {
 
-                requireContext().createIntent(SettingActivity::class.java)
-                    .startActivity(requireContext())
-            }
 
 
             ivVip.click {
@@ -134,6 +137,54 @@ class MineFragment : BaseFragment<FraMineBinding, UserViewModel>(FraMineBinding:
                 requireContext().createIntent(VisitorActivity::class.java)
                     .startActivity(requireContext())
             }
+
+
+
+
+            tvEmail.text = UserInfoHold.userInfo?.email?:""
+
+
+            tvVersion.text = "V ${BuildConfig.VERSION_NAME}"
+
+            tvBottomEmail.setOnClickListener {
+
+                requireActivity().copyContent(getString(R.string.app_name),tvBottomEmail.text.toString())
+            }
+
+            sllAccount.click {
+
+            }
+
+            sllAgreement.click{
+
+                createIntent(WebActivity::class.java)
+                    .putExtra(AppConstant.Constant.URL, AppConstant.ClientInfo.BASE_SERVICE_POLICY_URL)
+                    .putExtra(AppConstant.Constant.TITLE, "User Agreement").startActivity(requireActivity())
+            }
+            sllPrivacy.click{
+
+                createIntent(WebActivity::class.java)
+                    .putExtra(AppConstant.Constant.URL, AppConstant.ClientInfo.BASE_PRIVACY_POLICY_URL)
+                    .putExtra(AppConstant.Constant.TITLE, "Privacy Policy").startActivity(requireActivity())
+            }
+
+            sllDelete.click {
+                createIntent(DeleteAccountActivity::class.java).startActivity(requireActivity())
+            }
+            sllLoginOut.click {
+
+                LoginOutDialog().apply {
+
+                    onConfirm = {
+
+                        mViewModel.loginOutApp()
+                    }
+
+                }.show(parentFragmentManager)
+
+
+            }
+
         }
 
 
@@ -292,18 +343,10 @@ class MineFragment : BaseFragment<FraMineBinding, UserViewModel>(FraMineBinding:
                 clPhoto.visibility = View.GONE
                 clVideo.visibility = View.GONE
                 ivAlbum.visibility = View.GONE
-                viewLine0.visibility = View.GONE
-                viewLine1.visibility = View.GONE
-                llRenew.visibility = View.VISIBLE
-                llDetail.visibility = View.GONE
             }else{
                 clPhoto.visibility = View.VISIBLE
                 clVideo.visibility = View.VISIBLE
                 ivAlbum.visibility = View.VISIBLE
-                viewLine0.visibility = View.VISIBLE
-                viewLine1.visibility = View.VISIBLE
-                llRenew.visibility = View.GONE
-                llDetail.visibility = View.VISIBLE
             }
 
         }
@@ -328,10 +371,8 @@ class MineFragment : BaseFragment<FraMineBinding, UserViewModel>(FraMineBinding:
         progress+= if (mUserInfoData.mySign.isNullOrEmpty()) 0 else 13
         progress+= if (mUserInfoData.hobbyTags.isNullOrEmpty()) 0 else 10
 
-        mViewBinding.tvProgress.text = "${progress}%"
 
 
-        mViewBinding.avatarContainer.currentProgress = 360f/100*progress
     }
 
 

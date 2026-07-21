@@ -70,10 +70,7 @@
             android:name=".activity.PayWebActivity"
             android:screenOrientation="portrait"
             android:exported="true"/>
-        <activity
-            android:name=".activity.SettingActivity"
-            android:screenOrientation="portrait"
-            android:exported="true"/>
+
         <activity
             android:name=".activity.DeleteAccountActivity"
             android:screenOrientation="portrait"

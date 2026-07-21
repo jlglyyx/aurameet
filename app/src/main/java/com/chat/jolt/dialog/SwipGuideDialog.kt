@@ -17,6 +17,11 @@ class SwipGuideDialog: BaseDialog<DialogSwipGuideBinding>(DialogSwipGuideBinding
 
         withViewBinding {
 
+            ivClose.setOnClickListener {
+
+                dismissAllowingStateLoss()
+            }
+
             tvCommit.click {
 
                 onConfirm()

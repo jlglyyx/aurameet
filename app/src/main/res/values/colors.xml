@@ -199,6 +199,7 @@
     <color name="color_3D3C3A">#3D3C3A</color>
     <color name="color_251126">#251126</color>
     <color name="color_EEEEEE">#EEEEEE</color>
+    <color name="color_F8BB4D">#F8BB4D</color>
 
     <color name="firstTextColor">@color/color_151515</color>
     <color name="startGradientColor">@color/color_FFFFB0</color>

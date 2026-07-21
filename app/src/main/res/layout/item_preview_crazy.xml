@@ -146,8 +146,8 @@
             app:shape_solidColor="@color/color_button">
 
             <ImageView
-                android:layout_width="@dimen/dp_18"
-                android:layout_height="@dimen/dp_18"
+                android:layout_width="@dimen/dp_28"
+                android:layout_height="@dimen/dp_28"
                 android:id="@+id/iv_type"
                 android:src="@drawable/iv_open_like_vip" />
 
@@ -159,6 +159,7 @@
                 android:textColor="@color/white"
                 android:textSize="@dimen/sp_18"
                 android:id="@+id/tv_get_vip"
+                android:layout_marginTop="@dimen/dp_2"
                 android:textStyle="bold" />
         </com.hjq.shape.layout.ShapeLinearLayout>
 

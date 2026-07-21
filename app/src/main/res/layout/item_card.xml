@@ -298,7 +298,7 @@
 
         <ImageView
             android:id="@+id/iv_like"
-            android:layout_width="@dimen/dp_56"
+            android:layout_width="@dimen/dp_144"
             android:layout_height="@dimen/dp_56"
             android:src="@drawable/iv_like"
             app:layout_constraintEnd_toEndOf="parent"

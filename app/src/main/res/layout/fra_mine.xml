@@ -34,26 +34,26 @@
             android:gravity="end"
             android:orientation="horizontal">
 
+            <ImageView
+                android:id="@+id/iv_edit"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginEnd="@dimen/sp_12"
+                android:src="@drawable/iv_mine_edit" />
 
             <ImageView
                 android:id="@+id/iv_album"
                 android:layout_width="@dimen/dp_30"
                 android:layout_height="@dimen/dp_30"
-                android:layout_marginEnd="@dimen/sp_12"
                 android:src="@drawable/iv_album" />
 
             <ImageView
                 android:id="@+id/iv_feedback"
                 android:layout_width="@dimen/dp_30"
                 android:layout_height="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_12"
                 android:src="@drawable/iv_report" />
 
-            <ImageView
-                android:id="@+id/iv_setting"
-                android:layout_width="@dimen/dp_30"
-                android:layout_height="@dimen/dp_30"
-                android:layout_marginStart="@dimen/dp_12"
-                android:src="@drawable/iv_setting" />
 
         </LinearLayout>
 
@@ -77,69 +77,38 @@
                 android:id="@+id/ll_user_info"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_15"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
-
-                <com.chat.lib_common.widget.RingConstraintLayout
+                <com.hjq.shape.layout.ShapeConstraintLayout
                     android:id="@+id/avatar_container"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="@dimen/dp_8"
+                    android:padding="@dimen/dp_5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shape_radius="@dimen/dp_70"
+                    app:shape_strokeColor="@color/white"
+                    app:shape_strokeSize="@dimen/dp_1">
 
                     <com.google.android.material.imageview.ShapeableImageView
                         android:id="@+id/iv_avatar"
-                        android:layout_width="@dimen/dp_85"
-                        android:layout_height="@dimen/dp_85"
+                        android:layout_width="@dimen/dp_70"
+                        android:layout_height="@dimen/dp_70"
                         android:scaleType="centerCrop"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:shapeAppearance="@style/circleStyle" />
 
-                </com.chat.lib_common.widget.RingConstraintLayout>
-
-                <com.hjq.shape.layout.ShapeLinearLayout
-                    android:id="@+id/sll_edit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="@dimen/dp_10"
-                    android:paddingVertical="@dimen/dp_3"
-                    app:layout_constraintBottom_toBottomOf="@+id/avatar_container"
-                    app:layout_constraintEnd_toEndOf="@+id/avatar_container"
-                    app:layout_constraintStart_toStartOf="@+id/avatar_container"
-                    app:shape_radius="@dimen/dp_12"
-                    app:shape_solidColor="@color/color_4E4C51"
-                    app:shape_strokeColor="@color/color_EAA82B"
-                    app:shape_strokeSize="@dimen/dp_2">
-
-                    <ImageView
-                        android:layout_width="@dimen/dp_14"
-                        android:layout_height="@dimen/dp_14"
-                        android:src="@drawable/iv_edit" />
-
-                    <TextView
-                        android:id="@+id/tv_progress"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dp_3"
-                        android:text="0%"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/sp_13" />
-
-                </com.hjq.shape.layout.ShapeLinearLayout>
+                </com.hjq.shape.layout.ShapeConstraintLayout>
 
 
                 <LinearLayout
                     android:id="@+id/ll_name"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_8"
                     android:layout_marginTop="@dimen/dp_15"
                     android:orientation="horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -151,11 +120,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:ellipsize="end"
-                        android:fontFamily="@font/arial_black"
+                        android:fontFamily="@font/rany_b"
                         android:maxEms="5"
                         android:singleLine="true"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sp_24"
+                        android:textSize="@dimen/sp_22"
                         android:textStyle="bold"
                         app:layout_constrainedWidth="true"
                         tools:text="1111111111111" />
@@ -164,10 +133,10 @@
                         android:id="@+id/tv_age"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/arial_black"
-                        android:textSize="@dimen/sp_24"
-                        android:textStyle="bold"
+                        android:fontFamily="@font/rany_b"
                         android:textColor="@color/white"
+                        android:textSize="@dimen/sp_22"
+                        android:textStyle="bold"
                         tools:text="111" />
                 </LinearLayout>
 
@@ -176,28 +145,172 @@
                     android:id="@+id/iv_vip"
                     android:layout_width="@dimen/dp_55"
                     android:layout_height="@dimen/dp_21"
-                    android:layout_marginTop="@dimen/dp_15"
+                    android:layout_marginStart="@dimen/dp_10"
                     android:src="@drawable/iv_no_vip"
-                    app:layout_constraintStart_toStartOf="@+id/ll_name"
-                    app:layout_constraintTop_toBottomOf="@+id/ll_name" />
+                    app:layout_constraintStart_toEndOf="@+id/stv_id"
+                    app:layout_constraintTop_toTopOf="@+id/stv_id" />
 
                 <com.hjq.shape.view.ShapeTextView
                     android:id="@+id/stv_id"
-                    android:gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="@dimen/dp_21"
-                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:gravity="center"
                     android:paddingHorizontal="@dimen/dp_8"
                     android:text="ID:"
-                    android:textColor="@color/white"
+                    android:textColor="@color/firstTextColor"
                     android:textSize="@dimen/sp_12"
-                    app:layout_constraintStart_toEndOf="@+id/iv_vip"
-                    app:layout_constraintTop_toTopOf="@+id/iv_vip"
+                    app:layout_constraintStart_toStartOf="@+id/ll_name"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_name"
                     app:shape_radius="@dimen/dp_13"
-                    app:shape_solidColor="@color/color_36343A" />
+                    app:shape_solidColor="@color/color_FDDBFF" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_15"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_photo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_weight="1"
+                    android:background="@drawable/iv_mine_photo_bg"
+                    android:paddingVertical="@dimen/dp_12"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:visibility="visible"
+                    app:shape_radius="@dimen/dp_10">
+
+
+                    <com.hjq.shape.view.ShapeTextView
+                        android:id="@+id/tv_photo_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:gravity="center"
+                        android:minWidth="@dimen/dp_20"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:shape_radius="@dimen/dp_30"
+                        app:shape_solidColor="@color/white_20" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_13"
+                        android:text="Photos"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_photo_count"
+                        app:layout_constraintStart_toStartOf="@id/tv_photo_count" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_video"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_weight="1"
+                    android:background="@drawable/iv_mine_video_bg"
+                    android:paddingVertical="@dimen/dp_12"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingEnd="@dimen/dp_5"
+                    android:visibility="visible"
+                    app:shape_radius="@dimen/dp_10">
+
+
+                    <com.hjq.shape.view.ShapeTextView
+                        android:id="@+id/tv_video_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:gravity="center"
+                        android:minWidth="@dimen/dp_20"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:shape_radius="@dimen/dp_30"
+                        app:shape_solidColor="@color/white_20" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_13"
+                        android:text="Videos"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_video_count"
+                        app:layout_constraintStart_toStartOf="@id/tv_video_count" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_flash_chat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/iv_mine_fc_bg"
+                    android:paddingVertical="@dimen/dp_12"
+                    android:paddingStart="@dimen/dp_12"
+                    android:paddingEnd="@dimen/dp_5"
+                    app:shape_radius="@dimen/dp_10">
+
+
+                    <com.hjq.shape.view.ShapeTextView
+                        android:id="@+id/tv_fc_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:gravity="center"
+                        android:minWidth="@dimen/dp_20"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_15"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintDimensionRatio="1:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:shape_radius="@dimen/dp_30"
+                        app:shape_solidColor="@color/white_20" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_2"
+                        android:layout_marginBottom="@dimen/dp_13"
+                        android:text="Chats"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_13"
+                        app:layout_constraintBottom_toTopOf="@+id/tv_fc_count"
+                        app:layout_constraintStart_toStartOf="@id/tv_fc_count" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </LinearLayout>
 
 
             <com.hjq.shape.layout.ShapeConstraintLayout
@@ -211,7 +324,6 @@
                 app:shape_solidColor="@color/color_36343A">
 
 
-
                 <TextView
                     android:id="@+id/tv_wvyp"
                     android:layout_width="0dp"
@@ -219,7 +331,7 @@
                     android:layout_marginStart="@dimen/dp_8"
                     android:text="Who visited your profile"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/sp_15"
+                    android:textSize="@dimen/sp_14"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -235,7 +347,7 @@
                     android:layout_marginTop="@dimen/dp_2"
                     android:text="visitor:0"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/sp_13"
+                    android:textSize="@dimen/sp_14"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@id/tv_wvyp"
                     app:layout_constraintTop_toBottomOf="@+id/tv_wvyp" />
@@ -252,182 +364,13 @@
             </com.hjq.shape.layout.ShapeConstraintLayout>
 
 
-            <com.hjq.shape.layout.ShapeLinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp_15"
-                android:gravity="center"
-                android:orientation="horizontal"
-                app:shape_radius="@dimen/dp_12"
-                app:shape_solidColor="@color/color_36343A">
-
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/cl_photo"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingVertical="@dimen/dp_12"
-                    android:paddingStart="@dimen/dp_12"
-                    android:paddingEnd="@dimen/dp_5"
-                    android:visibility="gone"
-                    app:shape_radius="@dimen/dp_10">
-
-                    <ImageView
-                        android:id="@+id/iv_photo"
-                        android:layout_width="@dimen/dp_40"
-                        android:layout_height="@dimen/dp_40"
-                        android:src="@drawable/iv_mine_photo"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-
-                    <TextView
-                        android:id="@+id/tv_photo_count"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dp_8"
-                        android:text="0"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/sp_15"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/iv_photo"
-                        app:layout_constraintTop_toTopOf="@+id/iv_photo" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp_2"
-                        android:text="Photos"
-                        android:textColor="@color/color_999999"
-                        android:textSize="@dimen/sp_13"
-                        app:layout_constraintStart_toStartOf="@id/tv_photo_count"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_photo_count" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-                <View
-                    android:id="@+id/view_line_0"
-                    android:layout_width="@dimen/dp_1"
-                    android:layout_height="match_parent"
-                    android:layout_marginVertical="@dimen/dp_15"
-                    android:background="@color/white"
-                    android:alpha="0.15"
-                    android:visibility="gone" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/cl_video"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingVertical="@dimen/dp_12"
-                    android:paddingStart="@dimen/dp_12"
-                    android:paddingEnd="@dimen/dp_5"
-                    android:visibility="gone"
-                    app:shape_radius="@dimen/dp_10">
-
-                    <ImageView
-                        android:id="@+id/iv_video"
-                        android:layout_width="@dimen/dp_40"
-                        android:layout_height="@dimen/dp_40"
-                        android:src="@drawable/iv_mine_video"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-
-                    <TextView
-                        android:id="@+id/tv_video_count"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dp_8"
-                        android:text="0"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/sp_15"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/iv_video"
-                        app:layout_constraintTop_toTopOf="@+id/iv_video" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp_2"
-                        android:text="Videos"
-                        android:textColor="@color/color_999999"
-                        android:textSize="@dimen/sp_13"
-                        app:layout_constraintStart_toStartOf="@id/tv_video_count"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_video_count" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <View
-                    android:id="@+id/view_line_1"
-                    android:layout_width="@dimen/dp_1"
-                    android:layout_height="match_parent"
-                    android:layout_marginVertical="@dimen/dp_15"
-                    android:background="@color/white"
-                    android:alpha="0.15"
-                    android:visibility="gone" />
-
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:id="@+id/cl_flash_chat"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:paddingVertical="@dimen/dp_12"
-                    android:paddingStart="@dimen/dp_12"
-                    android:paddingEnd="@dimen/dp_5"
-                    app:shape_radius="@dimen/dp_10">
-
-                    <ImageView
-                        android:id="@+id/iv_fc"
-                        android:layout_width="@dimen/dp_40"
-                        android:layout_height="@dimen/dp_40"
-                        android:src="@drawable/iv_mine_flush_chat"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-
-                    <TextView
-                        android:id="@+id/tv_fc_count"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dp_8"
-                        android:text="0"
-                        android:textColor="@color/white"
-                        android:textSize="@dimen/sp_15"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/iv_fc"
-                        app:layout_constraintTop_toTopOf="@+id/iv_fc" />
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp_2"
-                        android:text="Chats"
-                        android:textColor="@color/color_999999"
-                        android:textSize="@dimen/sp_13"
-                        app:layout_constraintStart_toStartOf="@id/tv_fc_count"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_fc_count" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </com.hjq.shape.layout.ShapeLinearLayout>
-
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/cl_limit_time"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="@dimen/dp_15"
                 android:layout_marginBottom="-40dp"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/iv_image"
@@ -452,7 +395,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-
                 <LinearLayout
                     android:id="@+id/ll_time"
                     android:layout_width="match_parent"
@@ -470,10 +412,12 @@
                         android:gravity="center"
                         android:text="00"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sp_23"
+                        android:textSize="@dimen/sp_18"
                         android:textStyle="bold"
-                        app:shape_radius="@dimen/dp_5"
-                        app:shape_solidColor="@color/white_30" />
+                        app:shape_radius="@dimen/dp_8"
+                        app:shape_solidColor="@color/white_50"
+                        app:shape_strokeColor="@color/white"
+                        app:shape_strokeSize="@dimen/dp_1" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -481,7 +425,7 @@
                         android:layout_marginHorizontal="@dimen/dp_11"
                         android:text=":"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sp_30"
+                        android:textSize="@dimen/sp_28"
                         android:textStyle="bold" />
 
                     <com.hjq.shape.view.ShapeTextView
@@ -491,10 +435,12 @@
                         android:gravity="center"
                         android:text="00"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sp_23"
+                        android:textSize="@dimen/sp_18"
                         android:textStyle="bold"
-                        app:shape_radius="@dimen/dp_5"
-                        app:shape_solidColor="@color/white_30" />
+                        app:shape_radius="@dimen/dp_8"
+                        app:shape_solidColor="@color/white_50"
+                        app:shape_strokeColor="@color/white"
+                        app:shape_strokeSize="@dimen/dp_1" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -502,7 +448,7 @@
                         android:layout_marginHorizontal="@dimen/dp_11"
                         android:text=":"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sp_30"
+                        android:textSize="@dimen/sp_28"
                         android:textStyle="bold" />
 
                     <com.hjq.shape.view.ShapeTextView
@@ -512,10 +458,12 @@
                         android:gravity="center"
                         android:text="00"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sp_23"
+                        android:textSize="@dimen/sp_18"
                         android:textStyle="bold"
-                        app:shape_radius="@dimen/dp_5"
-                        app:shape_solidColor="@color/white_30" />
+                        app:shape_radius="@dimen/dp_8"
+                        app:shape_solidColor="@color/white_50"
+                        app:shape_strokeColor="@color/white"
+                        app:shape_strokeSize="@dimen/dp_1" />
 
 
                 </LinearLayout>
@@ -534,21 +482,33 @@
                 app:shape_radius="@dimen/dp_15"
                 app:shape_solidColor="@color/color_36343A">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <com.hjq.shape.layout.ShapeConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingVertical="@dimen/dp_10">
+                    android:padding="@dimen/dp_16"
+                    app:shape_radius="@dimen/dp_16"
+                    app:shape_solidGradientEndColor="@color/color_D438FF"
+                    app:shape_solidGradientStartColor="@color/color_F8BB4D">
+
+                    <ImageView
+                        android:id="@+id/iv_premium_tag"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:src="@drawable/iv_premium_tag"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
                         android:id="@+id/tv_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginStart="@dimen/dp_6"
                         android:fontFamily="@font/arial_black"
-                        android:text="Jolt Premium"
+                        android:text="Get Premium"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sp_16"
-                        app:layout_constraintStart_toStartOf="parent"
+                        android:textSize="@dimen/sp_18"
+                        app:layout_constraintStart_toEndOf="@+id/iv_premium_tag"
                         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -557,10 +517,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/dp_3"
+                        android:text="All premium account benefits!"
                         android:textColor="@color/white"
-                        android:textSize="@dimen/sp_12"
-                        android:text="Unlock your exclusive member benefits"
-                        android:textStyle="bold"
+                        android:textSize="@dimen/sp_13"
                         app:layout_constraintStart_toStartOf="@+id/tv_title"
                         app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
@@ -568,517 +527,79 @@
                         android:id="@+id/stv_activate_vip"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="@dimen/dp_20"
                         android:gravity="center"
-                        android:paddingHorizontal="@dimen/dp_8"
-                        android:paddingVertical="@dimen/dp_5"
+                        android:paddingHorizontal="@dimen/dp_10"
+                        android:paddingVertical="@dimen/dp_10"
                         android:text="Upgrade"
-                        android:textColor="@color/color_151515"
-                        android:textSize="@dimen/sp_12"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_13"
                         android:textStyle="bold"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:shape_radius="@dimen/dp_13"
-                        app:shape_solidColor="@color/white"
-                        app:shape_solidPressedColor="@color/pressed_color_background" />
+                        app:shape_radius="@dimen/dp_30"
+                        app:shape_solidColor="@color/firstTextColor"
+                        app:shape_solidPressedColor="@color/pressed_color_background"
+                        app:shape_strokeColor="@color/white"
+                        app:shape_strokeSize="@dimen/dp_1" />
 
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dp_1"
-                    android:layout_marginHorizontal="@dimen/dp_15"
-                    android:alpha="0.15"
-                    android:background="@color/white" />
-
-
-                <LinearLayout
-                    android:id="@+id/ll_detail"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp_15"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_unlimited_chat" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="Unlimited Messages"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_vip_private_photo_" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="Private Photos"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp_15"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_more_swipe" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="More Matches"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_vip_private_video_" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="Private Videos"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp_15"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_light_premium" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="Special Badge"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_vip_private_album_" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="Release Private Album"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp_15"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_vip_flash_chat" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="Flash Chat"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_vip_visitor" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="My Visitor"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp_15"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_who_likes" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="See Who Likes Me"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-
-
-
-
-                <LinearLayout
-                    android:id="@+id/ll_renew"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp_15"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_unlimited_chat" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="Unlimited Messages"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_light_premium" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="Special Badge"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp_15"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_more_swipe" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="More Matches"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_who_likes" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="See Who Likes Me"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="@dimen/dp_15"
-                        android:layout_marginTop="@dimen/dp_10"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_vip_flash_chat" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="Flash Chat"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="@dimen/dp_22"
-                                android:layout_height="@dimen/dp_22"
-                                android:src="@drawable/iv_vip_visitor" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginStart="@dimen/dp_6"
-                                android:gravity="start"
-                                android:text="My Visitor"
-                                android:textColor="@color/white"
-                                android:textSize="@dimen/sp_11"
-                                android:textStyle="bold" />
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-                </LinearLayout>
+                </com.hjq.shape.layout.ShapeConstraintLayout>
 
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_8"
                     android:layout_weight="1"
                     android:overScrollMode="never"
-                    android:visibility="gone"
-                    tools:itemCount="5" />
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:spanCount="2"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_mine_privilege" />
 
-
-                <com.hjq.shape.view.ShapeTextView
-                    android:id="@+id/stv_see"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_20"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/dp_13"
-                    android:text="See All Features"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp_16"
-                    android:textStyle="bold"
-                    app:shape_radius="@dimen/dp_10"
-                    app:shape_solidColor="@color/color_EAA82B"
-                    app:shape_solidPressedColor="@color/pressed_color_light" />
             </com.hjq.shape.layout.ShapeLinearLayout>
 
+
+            <LinearLayout
+                android:id="@+id/stv_see"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-40dp"
+                android:background="@drawable/iv_b_open_vip_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingVertical="@dimen/dp_14"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <ImageView
+                    android:layout_width="@dimen/dp_28"
+                    android:layout_height="@dimen/dp_28"
+                    android:src="@drawable/iv_open_like_vip" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:text="See All Features"
+                    android:textColor="@color/color_563500"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
                 android:orientation="vertical">
 
                 <com.hjq.shape.view.ShapeTextView
@@ -1087,17 +608,16 @@
                     android:text="Setting"
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp_18"
-                    app:shape_textStartColor="@color/startGradientColor"
+                    android:textStyle="bold|italic"
                     app:shape_textEndColor="@color/endGradientColor"
-                    android:textStyle="bold|italic" />
-
+                    app:shape_textStartColor="@color/startGradientColor" />
 
 
                 <com.hjq.shape.layout.ShapeLinearLayout
                     android:id="@+id/sll_account"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_22"
                     android:clickable="true"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
@@ -1106,6 +626,12 @@
                     app:shape_radius="@dimen/dp_8"
                     app:shape_solidColor="@color/color_36343A"
                     app:shape_solidPressedColor="@color/pressed_color_light">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:src="@drawable/iv_mine_account_tag" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1120,7 +646,7 @@
                         android:id="@+id/tv_email"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/color_999999"
+                        android:textColor="@color/white"
                         android:textIsSelectable="true"
                         android:textSize="@dimen/sp_14" />
 
@@ -1128,7 +654,7 @@
 
 
                 <com.hjq.shape.layout.ShapeLinearLayout
-                    android:id="@+id/sll_agreement"
+                    android:id="@+id/sll_version"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
@@ -1141,6 +667,55 @@
                     app:shape_radiusInTopRight="@dimen/dp_8"
                     app:shape_solidColor="@color/color_36343A"
                     app:shape_solidPressedColor="@color/pressed_color_light">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:src="@drawable/iv_mine_version_tag" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="App Version"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/sp_14" />
+
+                </com.hjq.shape.layout.ShapeLinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0_1"
+                    android:layout_marginHorizontal="@dimen/dp_15"
+                    android:background="@color/color_545257" />
+
+                <com.hjq.shape.layout.ShapeLinearLayout
+                    android:id="@+id/sll_agreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/dp_15"
+                    android:paddingStart="@dimen/dp_18"
+                    android:paddingEnd="@dimen/dp_8"
+                    app:shape_solidColor="@color/color_36343A"
+                    app:shape_solidPressedColor="@color/pressed_color_light">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:src="@drawable/iv_mine_ua_tag" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1178,6 +753,12 @@
                     app:shape_solidColor="@color/color_36343A"
                     app:shape_solidPressedColor="@color/pressed_color_light">
 
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:src="@drawable/iv_mine_policy_tag" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1209,6 +790,12 @@
                     app:shape_radiusInTopRight="@dimen/dp_8"
                     app:shape_solidColor="@color/color_36343A"
                     app:shape_solidPressedColor="@color/pressed_color_light">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:src="@drawable/iv_mine_delete_account_tag" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -1249,6 +836,12 @@
                     app:shape_solidColor="@color/color_36343A"
                     app:shape_solidPressedColor="@color/pressed_color_light">
 
+                    <ImageView
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_marginEnd="@dimen/dp_12"
+                        android:src="@drawable/iv_mine_logout_tag" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -1276,6 +869,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_20"
                 android:layout_marginBottom="@dimen/dp_10"
                 android:gravity="center"
                 android:orientation="vertical">
@@ -1283,19 +877,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="service@jolt-chat.com"
-                    android:textColor="@color/color_EAA82B"
-                    android:id="@+id/tv_bottom_email"
-                    android:textSize="@dimen/sp_12" />
+                    android:text="Contact Us"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/white_40"
+                    android:textSize="@dimen/sp_14" />
 
                 <TextView
-                    android:id="@+id/tv_version_1"
+                    android:id="@+id/tv_bottom_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_5"
+                    android:fontFamily="@font/rany_b"
+                    android:text="service@jolt-chat.com"
                     android:textColor="@color/white"
-                    android:textColorHighlight="@color/color_999999"
-                    android:textSize="@dimen/sp_12" />
+                    android:textSize="@dimen/sp_14" />
+
 
             </LinearLayout>
 
