@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/dp_2_5"
     app:shape_radius="@dimen/dp_5"
-    app:shape_solidColor="@color/color_36343A">
+    app:shape_solidColor="@color/white_10">
 
     <com.hjq.shape.layout.ShapeConstraintLayout
         android:layout_width="0dp"

@@ -2,13 +2,16 @@ package com.chat.jolt.dialog
 
 import android.os.Bundle
 import android.view.Gravity
+import android.view.WindowManager
 import com.chat.jolt.adapter.HobbyTagAdapter
 import com.chat.jolt.data.HobbyTagData
 import com.chat.jolt.databinding.DialogEditInterestBinding
 import com.chat.lib_common.constant.AppConstant
 import com.chat.lib_common.dialog.BaseDialog
 import com.chat.lib_common.util.click
+import com.chat.lib_common.util.edgeToEdgeAll
 import com.chat.lib_common.util.edgeToEdgeBottom
+import com.chat.lib_common.util.edgeToEdgeTop
 import com.chat.lib_common.util.formatListJson
 import com.chat.lib_common.util.toJson
 
@@ -50,7 +53,7 @@ class EditInterestDialog : BaseDialog<DialogEditInterestBinding>(DialogEditInter
         withViewBinding {
 
 
-            root.edgeToEdgeBottom()
+            root.edgeToEdgeTop()
 
             ivClose.click {
 
@@ -156,6 +159,10 @@ class EditInterestDialog : BaseDialog<DialogEditInterestBinding>(DialogEditInter
 
     override fun setDialogGravity(): Int {
         return Gravity.BOTTOM
+    }
+
+    override fun setDialogHeight(): Int {
+        return WindowManager.LayoutParams.MATCH_PARENT
     }
 
 

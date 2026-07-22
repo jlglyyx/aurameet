@@ -9,6 +9,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.chat.jolt.R
 import com.chat.jolt.data.UpdateUserInfoData
 import com.chat.jolt.databinding.ActEditUserInfoBinding
+import com.chat.jolt.databinding.ViewEditTabBinding
 import com.chat.jolt.databinding.ViewLikeTabBinding
 import com.chat.jolt.dialog.NoticeDialog
 import com.chat.jolt.dialog.ViolationDialog
@@ -165,9 +166,11 @@ class EditUserInfoActivity :
                 }
                 tab.customView?.let {
 
-                    val mViewLikeTabBinding = ViewLikeTabBinding.bind(it)
+                    val mViewEditTabBinding = ViewEditTabBinding.bind(it)
 
-                    mViewLikeTabBinding.tvTitle.setTextColor(getColor(R.color.white))
+
+                    mViewEditTabBinding.tvTitle.shapeDrawableBuilder.setSolidColor(getColor(R.color.white_30)).intoBackground()
+
 
                 }
 
@@ -181,9 +184,10 @@ class EditUserInfoActivity :
                 }
                 tab.customView?.let {
 
-                    val mViewLikeTabBinding = ViewLikeTabBinding.bind(it)
+                    val mViewEditTabBinding = ViewEditTabBinding.bind(it)
 
-                    mViewLikeTabBinding.tvTitle.setTextColor(getColor(R.color.color_999999))
+
+                    mViewEditTabBinding.tvTitle.shapeDrawableBuilder.setSolidColor(getColor(R.color.transparent)).intoBackground()
 
                 }
 
@@ -233,19 +237,21 @@ class EditUserInfoActivity :
                 true
             ) { tab, position ->
 
-                val mViewLikeTabBinding =
-                    ViewLikeTabBinding.inflate(LayoutInflater.from(this@EditUserInfoActivity))
+                val mViewEditTabBinding =
+                    ViewEditTabBinding.inflate(LayoutInflater.from(this@EditUserInfoActivity))
 
-                tab.customView = mViewLikeTabBinding.root
+                tab.customView = mViewEditTabBinding.root
 
-                mViewLikeTabBinding.tvTitle.text = mTitles[position]
+                mViewEditTabBinding.tvTitle.text = mTitles[position]
+
 
                 if (position == 0) {
-                    mViewLikeTabBinding.tvTitle.setTextColor(getColor(R.color.white))
+                    mViewEditTabBinding.tvTitle.shapeDrawableBuilder.setSolidColor(getColor(R.color.white_30)).intoBackground()
                 } else {
-                    mViewLikeTabBinding.tvTitle.setTextColor(getColor(R.color.color_999999))
+                    mViewEditTabBinding.tvTitle.shapeDrawableBuilder.setSolidColor(getColor(R.color.transparent)).intoBackground()
                 }
-                mViewLikeTabBinding.stvMessageCount.visibility = View.GONE
+
+                mViewEditTabBinding.stvMessageCount.visibility = View.GONE
 
                 tab.view.setOnLongClickListener {
 

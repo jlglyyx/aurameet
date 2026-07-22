@@ -3,6 +3,7 @@ package com.chat.jolt.dialog
 import android.graphics.Color
 import android.os.Bundle
 import android.view.Gravity
+import android.view.View
 import com.bigkoo.pickerview.adapter.ArrayWheelAdapter
 import com.chat.jolt.R
 import com.chat.jolt.data.ProfessionData
@@ -24,7 +25,7 @@ import kotlin.text.isNotEmpty
 
 class EditWheelDialog : BaseDialog<DialogEditWheelBinding>(DialogEditWheelBinding::inflate) {
 
-    var onConfirm: (String,String) -> Unit = {_,_ ->}
+    var onConfirm: ((String,String) -> Unit)? = null
 
 
     private var list = mutableListOf<String>()
@@ -77,7 +78,7 @@ class EditWheelDialog : BaseDialog<DialogEditWheelBinding>(DialogEditWheelBindin
                     keyList[mCurrentIndex]
                 }
 
-                onConfirm(mCurrentItem,key)
+                onConfirm?.invoke(mCurrentItem,key)
 
                 dismissAllowingStateLoss()
 
@@ -111,7 +112,8 @@ class EditWheelDialog : BaseDialog<DialogEditWheelBinding>(DialogEditWheelBindin
                 setCyclic(false)
                 cameraDistance = 20f
                 setDividerColor(Color.TRANSPARENT)
-                setTextColorCenter(requireContext().getColor(R.color.white))
+                setTextSize(20f)
+                setTextColorCenter(requireContext().getColor(R.color.firstTextColor))
                 setTextColorOut(requireContext().getColor(R.color.color_999999))
                 currentItem = list.indexOfFirst { it == mCurrentItem }
                 setOnItemSelectedListener { index ->
@@ -140,7 +142,11 @@ class EditWheelDialog : BaseDialog<DialogEditWheelBinding>(DialogEditWheelBindin
 
                 mDialogBinding.tvTitle.text = "Weight"
 
-                (40..120).map { "${it}kg" }.toMutableList()
+                mDialogBinding.tvUnit.text = "KG"
+
+                (40..120).map { "${it}" }.toMutableList()
+
+
 
             }
 
@@ -148,12 +154,16 @@ class EditWheelDialog : BaseDialog<DialogEditWheelBinding>(DialogEditWheelBindin
 
                 mDialogBinding.tvTitle.text = "Height"
 
-                (130..220).map { "${it}cm" }.toMutableList()
+                mDialogBinding.tvUnit.text = "CM"
+
+                (130..220).map { "${it}" }.toMutableList()
             }
 
             2 -> {
 
                 mDialogBinding.tvTitle.text = "Profession"
+
+                mDialogBinding.tvUnit.visibility = View.GONE
 
                 val mProfessionCache = getCache(AppConstant.Constant.PROFESSION, "")
 
@@ -175,6 +185,8 @@ class EditWheelDialog : BaseDialog<DialogEditWheelBinding>(DialogEditWheelBindin
             3 -> {
 
                 val mSocialAimCache = getCache(AppConstant.Constant.SOCIAL_AIM, "")
+
+                mDialogBinding.tvUnit.visibility = View.GONE
 
                 if (mSocialAimCache.isNotEmpty()) {
 

@@ -1,89 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:shape_radiusInTopLeft="@dimen/dp_20"
-    app:shape_radiusInTopRight="@dimen/dp_20"
-    android:orientation="vertical"
-    android:gravity="center"
-    app:shape_solidColor="@color/color_222222">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingHorizontal="@dimen/dp_25"
-    android:paddingVertical="@dimen/dp_22">
+    android:background="@drawable/layer_main">
 
-    <ImageView
-        android:layout_width="@dimen/dp_32"
-        android:layout_height="@dimen/dp_32"
-        android:id="@+id/iv_close"
-        android:padding="@dimen/dp_2"
-        android:layout_marginStart="@dimen/dp_10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/iv_close_buy_right" />
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/arial_black"
-        android:text="My interests"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_20"
-        android:textStyle="bold" />
-
-
-    <com.hjq.shape.view.ShapeTextView
-        android:id="@+id/tv_save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingHorizontal="@dimen/dp_10"
-        android:paddingVertical="@dimen/dp_2"
-        android:textColor="@color/white"
-        android:text="Save"
-        android:enabled="false"
-        app:shape_solidDisabledColor="@color/color_C5C5C5"
-        android:layout_marginEnd="@dimen/dp_10"
-        app:shape_solidPressedColor="@color/pressed_color_light"
-        android:textSize="@dimen/sp_14"
-        app:shape_radius="@dimen/dp_12"
-        app:shape_solidColor="@color/color_button"
-        app:layout_constraintTop_toTopOf="@+id/tv_title"
-        app:layout_constraintBottom_toBottomOf="@id/tv_title"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-
-
-
-    <LinearLayout
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="horizontal"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:layout_marginTop="@dimen/dp_20"
-        android:id="@+id/ll_birth"
-        android:gravity="center">
+        android:layout_height="match_parent"
+        android:paddingHorizontal="@dimen/dp_8"
+        >
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="@dimen/dp_35"
+            android:layout_height="@dimen/dp_35"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/iv_back"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintTop_toTopOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+/>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My interests"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_20"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dp_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_6"
+            android:text="Save"
+            android:layout_marginEnd="@dimen/dp_7"
+            android:textColor="@color/firstTextColor"
+            android:textSize="@dimen/dp_16"
+            app:layout_constraintBottom_toBottomOf="@id/tv_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_title"
+            app:shape_radius="@dimen/dp_30"
+            android:textStyle="bold"
+            app:shape_solidColor="@color/white"
+            app:shape_textDisabledColor="@color/white"
+            app:shape_solidDisabledColor="@color/color_C5C5C5"
+            app:shape_solidPressedColor="@color/pressed_color_dark" />
+
+
 
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_marginTop="@dimen/dp_30"
+            android:layout_marginBottom="@dimen/dp_20"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:listitem="@layout/item_hobby_step"
-            android:id="@+id/recyclerView"/>
-
-
-    </LinearLayout>
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:listitem="@layout/item_hobby_step" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</com.hjq.shape.layout.ShapeConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

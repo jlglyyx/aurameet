@@ -16,10 +16,10 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/sp_16"
         android:id="@+id/tv_title"
-        android:textColor="@color/white"
+        android:textColor="@color/white_70"
         android:text="key"/>
 
-    <TextView
+    <com.hjq.shape.view.ShapeTextView
         android:layout_width="0dp"
         android:layout_weight="1"
         android:gravity="end"
@@ -27,8 +27,9 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/sp_14"
         android:id="@+id/tv_content"
-        android:textColor="@color/white"
-        android:text="value"/>
+        android:textColor="@color/color_FDDBFF"
+        app:shape_textSelectedColor="@color/white"
+        android:text="Add"/>
 
     <com.google.android.material.imageview.ShapeableImageView
         android:layout_width="@dimen/dp_34"

@@ -38,13 +38,13 @@
                 android:id="@+id/iv_edit"
                 android:layout_width="@dimen/dp_30"
                 android:layout_height="@dimen/dp_30"
-                android:layout_marginEnd="@dimen/sp_12"
                 android:src="@drawable/iv_mine_edit" />
 
             <ImageView
                 android:id="@+id/iv_album"
                 android:layout_width="@dimen/dp_30"
                 android:layout_height="@dimen/dp_30"
+                android:layout_marginStart="@dimen/dp_12"
                 android:src="@drawable/iv_album" />
 
             <ImageView

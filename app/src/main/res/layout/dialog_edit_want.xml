@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/scl_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/iv_bt_d_out_bg"
+        android:background="@drawable/iv_bt_d_bg"
         android:clickable="true"
         android:focusable="true"
         android:gravity="center"
@@ -20,12 +21,11 @@
             android:id="@+id/iv_close"
             android:layout_width="@dimen/dp_32"
             android:layout_height="@dimen/dp_32"
-
             android:padding="@dimen/dp_2"
             android:src="@drawable/iv_close_buy_right"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_title"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_title" />
+            app:layout_constraintBottom_toBottomOf="@+id/tv_title"/>
 
         <TextView
             android:id="@+id/tv_title"
@@ -62,27 +62,19 @@
             app:shape_solidPressedColor="@color/pressed_color_dark"
             app:shape_textDisabledColor="@color/white" />
 
-        <com.hjq.shape.view.ShapeEditText
-            android:id="@+id/set_text"
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_20"
             android:layout_marginBottom="@dimen/dp_25"
-            android:background="@null"
-            android:gravity="top"
-            android:hint="fill in…"
-            android:maxLength="200"
-            android:minLines="6"
-            android:paddingHorizontal="@dimen/dp_12"
-            android:paddingVertical="@dimen/dp_15"
-            android:textColor="@color/white"
-            android:textColorHint="@color/color_999999"
-            android:textSize="@dimen/sp_16"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_title"
-            app:shape_radius="@dimen/dp_15"
-            app:shape_solidColor="@color/color_3D3C3A" />
+            tools:itemCount="1"
+            android:nestedScrollingEnabled="false"
+            android:overScrollMode="never"
+            tools:listitem="@layout/item_i_want_step" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
