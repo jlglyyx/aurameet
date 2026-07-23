@@ -2,9 +2,9 @@
 <com.hjq.shape.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:shape_radius="@dimen/dp_10"
+    app:shape_radius="@dimen/dp_30"
     android:orientation="horizontal"
-    android:paddingVertical="@dimen/dp_6"
+    android:paddingVertical="@dimen/dp_7"
     android:paddingHorizontal="@dimen/dp_12"
     android:gravity="center"
     android:id="@+id/sll_container"
@@ -16,10 +16,9 @@
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
-        android:textStyle="bold"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:textSize="@dimen/sp_14" />
+        android:textSize="@dimen/sp_16" />
 
 
 </com.hjq.shape.layout.ShapeLinearLayout>

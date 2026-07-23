@@ -2,6 +2,7 @@ package com.chat.jolt.dialog
 
 import android.os.Bundle
 import android.view.Gravity
+import android.view.WindowManager
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
@@ -15,6 +16,7 @@ import com.chat.lib_common.constant.AppConstant
 import com.chat.lib_common.dialog.BaseDialog
 import com.chat.lib_common.util.click
 import com.chat.lib_common.util.edgeToEdgeBottom
+import com.chat.lib_common.util.edgeToEdgeTop
 import com.chat.lib_common.util.formatListJson
 import com.chat.lib_common.util.toJson
 
@@ -60,7 +62,7 @@ class EditTurnOnsDialog : BaseDialog<DialogEditTurnOnsBinding>(DialogEditTurnOns
         withViewBinding {
 
 
-            root.edgeToEdgeBottom()
+            root.edgeToEdgeTop()
 
             ivClose.click {
 
@@ -152,4 +154,7 @@ class EditTurnOnsDialog : BaseDialog<DialogEditTurnOnsBinding>(DialogEditTurnOns
     }
 
 
+    override fun setDialogHeight(): Int {
+        return WindowManager.LayoutParams.MATCH_PARENT
+    }
 }

@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
@@ -29,6 +30,7 @@ import com.chat.jolt.dialog.EditBirthDialog
 import com.chat.jolt.dialog.EditInterestDialog
 import com.chat.jolt.dialog.EditNameDialog
 import com.chat.jolt.dialog.EditTurnOnsDialog
+import com.chat.jolt.dialog.EditWantDialog
 import com.chat.jolt.dialog.PictureDetailDialog
 import com.chat.jolt.helper.UserInfoHold
 import com.chat.jolt.viewmodel.UserViewModel
@@ -247,7 +249,8 @@ class EditUserInfoFragment :
 
             ivtWant.click {
 
-                EditWheelDialog.newInstance(ivtWant.getTitle(), 3).apply {
+                EditWantDialog.newInstance(ivtWant.getTitle()).apply {
+
 
                     onConfirm = { it, key ->
 
@@ -794,42 +797,42 @@ class EditUserInfoFragment :
 
         var progress = 0
 
-        withViewBinding {
-
-            progress = 27 - if (mUserInfoData.coverPics.isNullOrEmpty()) {
-                0
-            } else {
-                mUserInfoData.coverPics!!.size * 3
-            }
-
-            tvPhotoProgress.visibility = if (progress <= 0) View.GONE else View.VISIBLE
-
-            tvPhotoProgress.text = "+${progress}%"
-
-            progress = 50
-
-            progress -= if (mUserInfoData.nickname.isNullOrEmpty()) 0 else 10
-            progress -= if (mUserInfoData.headPic.isNullOrEmpty()) 0 else 10
-            progress -= if (mUserInfoData.height.isNullOrEmpty()) 0 else 10
-            progress -= if (mUserInfoData.weight.isNullOrEmpty()) 0 else 10
-            progress -= if (mUserInfoData.profession.isNullOrEmpty()) 0 else 10
-
-            tvBasicProgress.visibility = if (progress <= 0) View.GONE else View.VISIBLE
-
-            tvBasicProgress.text = "+${progress}%"
-
-            progress = if (mUserInfoData.mySign.isNullOrEmpty()) 13 else 0
-
-            tvAboutMeProgress.visibility = if (progress <= 0) View.GONE else View.VISIBLE
-
-            tvAboutMeProgress.text = "+${progress}%"
-
-            progress = if (mUserInfoData.hobbyTags.isNullOrEmpty()) 10 else 0
-
-            tvInterestsProgress.visibility = if (progress <= 0) View.INVISIBLE else View.VISIBLE
-
-            tvInterestsProgress.text = "+${progress}%"
-        }
+//        withViewBinding {
+//
+//            progress = 27 - if (mUserInfoData.coverPics.isNullOrEmpty()) {
+//                0
+//            } else {
+//                mUserInfoData.coverPics!!.size * 3
+//            }
+//
+//            tvPhotoProgress.visibility = if (progress <= 0) View.GONE else View.VISIBLE
+//
+//            tvPhotoProgress.text = "+${progress}%"
+//
+//            progress = 50
+//
+//            progress -= if (mUserInfoData.nickname.isNullOrEmpty()) 0 else 10
+//            progress -= if (mUserInfoData.headPic.isNullOrEmpty()) 0 else 10
+//            progress -= if (mUserInfoData.height.isNullOrEmpty()) 0 else 10
+//            progress -= if (mUserInfoData.weight.isNullOrEmpty()) 0 else 10
+//            progress -= if (mUserInfoData.profession.isNullOrEmpty()) 0 else 10
+//
+//            tvBasicProgress.visibility = if (progress <= 0) View.GONE else View.VISIBLE
+//
+//            tvBasicProgress.text = "+${progress}%"
+//
+//            progress = if (mUserInfoData.mySign.isNullOrEmpty()) 13 else 0
+//
+//            tvAboutMeProgress.visibility = if (progress <= 0) View.GONE else View.VISIBLE
+//
+//            tvAboutMeProgress.text = "+${progress}%"
+//
+//            progress = if (mUserInfoData.hobbyTags.isNullOrEmpty()) 10 else 0
+//
+//            tvInterestsProgress.visibility = if (progress <= 0) View.INVISIBLE else View.VISIBLE
+//
+//            tvInterestsProgress.text = "+${progress}%"
+//        }
 
     }
 

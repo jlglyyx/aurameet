@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical"
-    app:shape_radiusInTopLeft="@dimen/dp_20"
-    app:shape_radiusInTopRight="@dimen/dp_20"
-    app:shape_solidColor="@color/color_222222">
+    android:background="@drawable/iv_bt_d_bg">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,37 +12,53 @@
         android:paddingHorizontal="@dimen/dp_25"
         android:paddingVertical="@dimen/dp_25">
 
-        <TextView
+        <com.hjq.shape.view.ShapeTextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/arial_black"
+            android:text="Now I Want"
             android:textColor="@color/white"
             android:textSize="@dimen/sp_20"
-            android:text="Now I Want"
-            android:textStyle="bold"
+            android:textStyle="bold|italic"
+            app:shape_textEndColor="@color/endGradientColor"
+            app:shape_textStartColor="@color/startGradientColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
-        <LinearLayout
-            android:id="@+id/ll_wheel"
+
+        <com.hjq.shape.view.ShapeView
             android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:gravity="center"
-            android:orientation="horizontal"
+            android:layout_height="@dimen/dp_40"
+            app:layout_constraintTop_toTopOf="@+id/wheel_item"
+            app:layout_constraintBottom_toBottomOf="@+id/wheel_item"
+            app:shape_radius="@dimen/dp_16"
+            android:id="@+id/sv_bg"
+            app:shape_solidColor="@color/color_FDDBFF"
+            />
+
+        <com.contrarywind.view.WheelView
+            android:id="@+id/wheel_item"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_250"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title">
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            android:layout_weight="1" />
 
-            <com.contrarywind.view.WheelView
-                android:id="@+id/wheel_item"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
-        </LinearLayout>
+        <TextView
+            android:text="CM"
+            android:textColor="@color/firstTextColor"
+            android:textSize="@dimen/sp_20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/sv_bg"
+            app:layout_constraintBottom_toBottomOf="@+id/sv_bg"
+            app:layout_constraintEnd_toEndOf="@+id/sv_bg"
+            android:layout_marginEnd="@dimen/dp_20"
+            android:id="@+id/tv_unit"/>
 
 
         <com.hjq.shape.view.ShapeTextView
@@ -56,35 +68,45 @@
             android:layout_marginEnd="@dimen/dp_20"
             android:layout_weight="1"
             android:gravity="center"
-            android:paddingVertical="@dimen/dp_14"
-            android:text="Cancel"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_16"
             app:layout_constraintEnd_toStartOf="@+id/tv_save"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ll_wheel"
-            app:shape_radius="@dimen/dp_25"
+            app:layout_constraintTop_toBottomOf="@+id/wheel_item"
             app:shape_strokeColor="@color/white"
-            app:shape_strokeSize="@dimen/dp_2" />
+            android:paddingVertical="@dimen/dp_18"
+            android:text="Cancel"
+            android:textColor="@color/color_999999"
+            android:textSize="@dimen/sp_18"
+            app:shape_radius="@dimen/dp_25"
+            app:shape_strokeGradientColor="@color/color_ECA7FF"
+            app:shape_strokeGradientStartColor="@color/color_FFFFB0"
+            app:shape_strokeSize="@dimen/dp_2"
+            android:textStyle="bold"
+            app:shape_textEndColor="@color/endGradientColor"
+            app:shape_textStartColor="@color/startGradientColor"
+            />
 
         <com.hjq.shape.view.ShapeTextView
             android:id="@+id/tv_save"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
-            android:paddingVertical="@dimen/dp_14"
-            android:text="Save"
             android:enabled="false"
-            app:shape_solidDisabledColor="@color/color_C5C5C5"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_16"
+            android:gravity="center"
+            android:text="Save"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/tv_close"
             app:layout_constraintTop_toTopOf="@+id/tv_close"
-            app:shape_radius="@dimen/dp_25"
-            app:shape_solidColor="@color/color_button"
-            app:shape_solidPressedColor="@color/pressed_color_dark" />
+            app:shape_solidDisabledColor="@color/color_C5C5C5"
+            android:paddingVertical="@dimen/dp_18"
+            android:textColor="@color/firstTextColor"
+            app:shape_textDisabledColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            app:shape_radius="@dimen/dp_30"
+            android:textStyle="bold"
+            app:shape_solidGradientStartColor="@color/color_FFFFB0"
+            app:shape_solidGradientEndColor="@color/color_ECA7FF"
+            app:shape_solidPressedColor="@color/pressed_color_dark"
+            />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</com.hjq.shape.layout.ShapeConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,7 +35,14 @@ class InfoItemView @JvmOverloads constructor(
             mViewInfoItemBinding.apply {
 
                 tvTitle.text = title
-                tvContent.text = content
+
+                if (content.isNullOrEmpty()){
+                    tvContent.isSelected = false
+                }else{
+                    tvContent.text = content
+                    tvContent.isSelected = true
+                }
+
 
                 ivImage.visibility = if (mItvImgVisible) VISIBLE else GONE
                 ivInto.visibility = if (mItvIntoImgVisible) VISIBLE else INVISIBLE
@@ -57,6 +64,8 @@ class InfoItemView @JvmOverloads constructor(
     fun setContent(content:String?){
 
         mViewInfoItemBinding.tvContent.text = content
+
+        mViewInfoItemBinding.tvContent.isSelected = !content.isNullOrEmpty()
     }
 
     fun setImage(content:Any?){

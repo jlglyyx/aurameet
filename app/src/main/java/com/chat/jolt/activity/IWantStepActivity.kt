@@ -37,6 +37,9 @@ class IWantStepActivity : BaseActivity<ActIWantStepBinding, MainViewModel>(ActIW
     private val mTurnsOnsAdapter by lazy{ TurnsOnsAdapter() }
 
 
+    private val wantList = mutableListOf(R.drawable.iv_want_0,R.drawable.iv_want_1,R.drawable.iv_want_2,R.drawable.iv_want_3)
+
+    private val unWantList = mutableListOf(R.drawable.iv_want_0_un,R.drawable.iv_want_1_un,R.drawable.iv_want_2_un,R.drawable.iv_want_3_un)
 
 
     override fun initView() {
@@ -145,6 +148,9 @@ class IWantStepActivity : BaseActivity<ActIWantStepBinding, MainViewModel>(ActIW
                     itemView.tvTitle.isEnabled = item.isCheck
 
                     if(item.isCheck){
+
+                        itemView.siv0.setImageResource(wantList[position])
+
                         itemView.ivImage.visibility = View.VISIBLE
 
                         itemView.sllContainer.shapeDrawableBuilder.setSolidColor(getColor(R.color.color_FDDBFF))
@@ -152,6 +158,8 @@ class IWantStepActivity : BaseActivity<ActIWantStepBinding, MainViewModel>(ActIW
 
 
                     }else{
+
+                        itemView.siv0.setImageResource(unWantList[position])
                         itemView.ivImage.visibility = View.GONE
                         itemView.sllContainer.shapeDrawableBuilder.setSolidColor(getColor(R.color.transparent))
                             .setStrokeColor(getColor(R.color.transparent)).intoBackground()
@@ -228,12 +236,5 @@ class IWantStepActivity : BaseActivity<ActIWantStepBinding, MainViewModel>(ActIW
         super.onDestroy()
     }
 
-    override fun onBackPressed() {
-
-        if (false){
-            super.onBackPressed()
-        }
-
-    }
 
 }

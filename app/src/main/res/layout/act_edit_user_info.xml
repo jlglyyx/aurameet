@@ -27,15 +27,15 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/dp_15"
             android:gravity="center"
-            android:paddingHorizontal="@dimen/dp_13"
-            android:paddingVertical="@dimen/dp_5"
-            android:textColor="@color/white"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_6"
+            android:textColor="@color/firstTextColor"
             android:text="Save"
             android:textStyle="bold"
-            android:textSize="@dimen/sp_14"
-            app:shape_radius="@dimen/dp_12"
+            android:textSize="@dimen/sp_16"
+            app:shape_radius="@dimen/dp_30"
             app:shape_solidPressedColor="@color/pressed_color_light"
-            app:shape_solidColor="@color/color_EAA82B"
+            app:shape_solidColor="@color/white"
             app:layout_constraintTop_toTopOf="@+id/toolbar"
             app:layout_constraintBottom_toBottomOf="@id/toolbar"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -46,23 +46,18 @@
         android:layout_height="wrap_content"
         android:id="@+id/tabLayout"
         app:tabPadding="@dimen/dp_0"
+        android:layout_marginHorizontal="@dimen/dp_13"
         android:background="@color/transparent"
         app:tabIndicatorHeight="@dimen/dp_0"
         app:tabMode="fixed"
         app:tabRippleColor="@color/transparent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_1"
-        android:alpha="0.25"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout"
-        android:background="@color/white"/>
+
 
     <androidx.viewpager2.widget.ViewPager2
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/dp_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tabLayout"
         android:id="@+id/viewPager"/>

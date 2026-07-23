@@ -57,11 +57,11 @@
         app:layout_constraintStart_toStartOf="@+id/sll_container"
         app:layout_constraintTop_toBottomOf="@+id/sll_container"
         app:layout_constraintEnd_toEndOf="@+id/sll_container"
-        android:src="@drawable/iv_select_want"
+        android:src="@drawable/iv_turn_check"
         android:layout_width="@dimen/dp_20"
         android:layout_height="@dimen/dp_20"
-        android:layout_marginTop="-10dp"
         android:visibility="gone"
+        android:layout_marginTop="-10dp"
         />
 
 </com.hjq.shape.layout.ShapeConstraintLayout>
