@@ -369,7 +369,7 @@ class ChatAdapter(private val scope: CoroutineScope) : BaseMultiItemAdapter<Cust
 
                                             SpanUtils.with(tvDesc).append(tvDescText)
                                                 .append("\nis filled")
-                                                .setForegroundColor(context.getColor(R.color.color_76E664))
+                                                .setForegroundColor(context.getColor(R.color.color_FDDBFF))
                                                 .create()
 
 
@@ -1082,7 +1082,6 @@ class ChatAdapter(private val scope: CoroutineScope) : BaseMultiItemAdapter<Cust
                     position: Int,
                     item: CustomMessage?
                 ) {
-                    holder.viewBinding.tv1.paint.isUnderlineText = true
                 }
 
             })
