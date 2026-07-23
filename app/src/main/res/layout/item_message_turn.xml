@@ -1,58 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.hjq.shape.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:id="@+id/cl_turn_ons"
-    android:paddingVertical="@dimen/dp_10"
-    android:paddingHorizontal="@dimen/dp_10"
+    android:layout_marginHorizontal="@dimen/dp_32"
+    android:paddingVertical="@dimen/dp_20"
+    android:paddingHorizontal="@dimen/dp_20"
+    app:shape_strokeGradientStartColor="@color/startGradientColor"
+    app:shape_strokeGradientColor="@color/endGradientColor"
+    app:shape_radius="@dimen/dp_20"
+    app:shape_strokeSize="@dimen/dp_2"
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/iv_turn_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/iv_turn_message"/>
-
-    <ImageView
-        app:layout_constraintStart_toEndOf="@+id/iv_turn_message"
-        android:id="@+id/iv_turn_message_bg"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="0dp"
-        android:scaleType="fitXY"
-        android:layout_marginStart="@dimen/dp_6"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@drawable/iv_turn_message_bg"/>
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_110"
+        android:src="@drawable/iv_limit_message"/>
 
     <TextView
-        app:layout_constraintTop_toTopOf="@+id/iv_turn_message_bg"
-        app:layout_constraintStart_toStartOf="@+id/iv_turn_message_bg"
-        app:layout_constraintEnd_toEndOf="@+id/iv_turn_message_bg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_14"
-        android:textSize="@dimen/sp_12"
-        android:id="@+id/tv_0"
-        android:textColor="@color/color_151515"
-        android:text="Add Turn-ons to your profile \nand find out what are those of \nthe oneyou're chatting with!"
+        android:textSize="@dimen/sp_15"
+        android:textColor="@color/white"
+        android:text="Add Turn-Ons to your profile and fine out what are those of the one you're chatting with！"
         android:gravity="center"/>
-    <TextView
-     app:layout_constraintTop_toBottomOf="@+id/tv_0"
-        app:layout_constraintStart_toStartOf="@+id/iv_turn_message_bg"
-        app:layout_constraintEnd_toEndOf="@+id/iv_turn_message_bg"
+
+    <com.hjq.shape.view.ShapeTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/sp_12"
-        android:id="@+id/tv_1"
-        android:layout_marginTop="@dimen/dp_5"
-        android:textColor="@color/color_151515"
-        android:text="TO THE TURN-ONS"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold"
+        app:shape_radius="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_20"
+        app:shape_solidGradientStartColor="@color/startGradientColor"
+        app:shape_solidGradientEndColor="@color/endGradientColor"
+        android:textColor="@color/firstTextColor"
+        android:id="@+id/stv_upgrade_account"
+        android:paddingVertical="@dimen/dp_12"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:text="To the turn-Ons"
         android:gravity="center"/>
 
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</com.hjq.shape.layout.ShapeLinearLayout>

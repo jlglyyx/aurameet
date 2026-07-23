@@ -28,8 +28,8 @@
             android:layout_height="@dimen/dp_40"
             android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ll_time"
-            app:shapeAppearanceOverlay="@style/RadiusStyle_10" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:shapeAppearanceOverlay="@style/circleStyle" />
 
 
         <com.hjq.shape.layout.ShapeConstraintLayout
@@ -38,7 +38,7 @@
             android:layout_marginStart="@dimen/dp_12"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_avatar"
-            app:layout_constraintTop_toTopOf="@+id/iv_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/ll_time"
             app:shape_radius="@dimen/dp_10"
             android:padding="@dimen/dp_5"
             app:shape_solidColor="@color/color_333333">

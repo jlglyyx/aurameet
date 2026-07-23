@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.hjq.shape.layout.ShapeLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:id="@+id/ll_limit_message"
-    android:paddingVertical="@dimen/dp_10"
-    android:paddingHorizontal="@dimen/dp_10"
+    android:layout_marginHorizontal="@dimen/dp_32"
+    android:paddingVertical="@dimen/dp_20"
+    android:paddingHorizontal="@dimen/dp_20"
+    app:shape_strokeGradientStartColor="@color/startGradientColor"
+    app:shape_strokeGradientColor="@color/endGradientColor"
+    app:shape_radius="@dimen/dp_20"
+    app:shape_strokeSize="@dimen/dp_2"
     android:orientation="vertical">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/dp_110"
+        android:layout_height="@dimen/dp_110"
         android:src="@drawable/iv_limit_message"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="@dimen/dp_8"
         android:textSize="@dimen/sp_15"
         android:textColor="@color/white"
-        android:text="Get Premium to send unlimited messages!"
+        android:text="Get Premium to send unlimited free messaging!"
         android:gravity="center"/>
 
     <com.hjq.shape.view.ShapeTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/sp_13"
-        app:shape_radius="@dimen/dp_19"
-        app:shape_solidColor="@color/color_EAA82B"
-        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold"
+        app:shape_radius="@dimen/dp_30"
+        android:layout_marginTop="@dimen/dp_20"
+        app:shape_solidGradientStartColor="@color/startGradientColor"
+        app:shape_solidGradientEndColor="@color/endGradientColor"
+        android:textColor="@color/firstTextColor"
         android:id="@+id/stv_upgrade_account"
-        android:paddingVertical="@dimen/dp_10"
-        android:paddingHorizontal="@dimen/dp_40"
+        android:paddingVertical="@dimen/dp_12"
+        android:paddingHorizontal="@dimen/dp_16"
         android:text="Upgrade Account"
         android:gravity="center"/>
 
-</LinearLayout>
+</com.hjq.shape.layout.ShapeLinearLayout>

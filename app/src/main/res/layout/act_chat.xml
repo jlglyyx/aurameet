@@ -5,7 +5,6 @@
     android:id="@+id/ll_root_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/appColor"
     android:orientation="vertical">
 
 
@@ -281,10 +280,10 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="horizontal"
-                app:shape_solidColor="@color/white_30"
+                app:shape_solidColor="@color/color_3D3C3A"
                 android:paddingHorizontal="@dimen/dp_10"
                 android:paddingVertical="@dimen/dp_4"
-                app:shape_radius="@dimen/dp_10">
+                app:shape_radius="@dimen/dp_40">
 
                 <ImageView
                     android:id="@+id/iv_send_media"
@@ -339,16 +338,18 @@
                     android:src="@drawable/iv_emoji" />
 
 
+                <ImageView
+                    android:id="@+id/iv_send_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:src="@drawable/iv_un_send_message"
+                    android:visibility="visible" />
+
             </com.hjq.shape.layout.ShapeLinearLayout>
 
 
-            <ImageView
-                android:id="@+id/iv_send_message"
-                android:layout_width="@dimen/dp_50"
-                android:layout_height="@dimen/dp_52"
-                android:layout_marginStart="@dimen/dp_10"
-                android:src="@drawable/iv_un_send_message"
-                android:visibility="visible" />
+
 
         </LinearLayout>
 
