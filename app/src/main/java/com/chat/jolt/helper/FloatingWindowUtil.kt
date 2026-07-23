@@ -345,12 +345,19 @@ object FloatingWindowUtil {
             remove()
         }
 
+        mFloatSwipGuideBinding.ivClose.click {
+
+            remove()
+        }
+
         val resultView: View? = mFloatSwipGuideBinding.root
 
         if (null == resultView) {
 
             return
         }
+
+
 
 
         remove()
