@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
     android:paddingTop="@dimen/dp_15"
     android:layout_marginVertical="@dimen/dp_10"
     android:layout_marginHorizontal="@dimen/dp_15"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:shape_solidColor="@color/color_333333"
-    app:shape_radius="@dimen/dp_15"
-    android:orientation="vertical">
+
+    android:background="@drawable/iv_match_pv_bg"
+    >
     <include
         android:id="@+id/ll_time"
         layout="@layout/item_message_time"
@@ -24,8 +23,8 @@
         android:id="@+id/tv_name"
         android:layout_marginStart="@dimen/dp_15"
         android:textColor="@color/white"
-        android:textSize="@dimen/sp_16"
-        android:textStyle="bold"
+        android:textSize="@dimen/sp_13"
+        android:gravity="center"
         android:layout_marginHorizontal="@dimen/dp_10"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -248,9 +247,6 @@
         android:paddingBottom="@dimen/dp_15"
         android:paddingTop="@dimen/dp_12"
         android:id="@+id/scl_turn"
-        app:shape_solidColor="@color/color_454545"
-        app:shape_radiusInBottomLeft="@dimen/dp_15"
-        app:shape_radiusInBottomRight="@dimen/dp_15"
         android:layout_marginTop="@dimen/dp_15"
         app:layout_constraintTop_toBottomOf="@+id/cl_video">
 
@@ -320,4 +316,4 @@
 
     </com.hjq.shape.layout.ShapeConstraintLayout>
 
-</com.hjq.shape.layout.ShapeConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

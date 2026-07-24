@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginVertical="@dimen/dp_15"
-            android:src="@drawable/iv_message_logo"
+            android:src="@drawable/iv_logo"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,7 +45,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                android:src="@drawable/iv_system_notice" />
+                android:src="@drawable/iv_report" />
 
             <com.hjq.shape.view.ShapeTextView
                 android:id="@+id/stv_message_count"
@@ -175,10 +175,7 @@
         app:tabIndicatorHeight="@dimen/dp_0"
         app:tabRippleColor="@color/transparent"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_1"
-        android:background="@color/color_36343A"/>
+
 
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

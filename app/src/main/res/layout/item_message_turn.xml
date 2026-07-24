@@ -17,7 +17,7 @@
     <ImageView
         android:layout_width="@dimen/dp_110"
         android:layout_height="@dimen/dp_110"
-        android:src="@drawable/iv_limit_message"/>
+        android:src="@drawable/iv_turn_message"/>
 
     <TextView
         android:layout_width="wrap_content"
