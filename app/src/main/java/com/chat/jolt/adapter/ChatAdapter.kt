@@ -1082,7 +1082,6 @@ class ChatAdapter(private val scope: CoroutineScope) : BaseMultiItemAdapter<Cust
                     position: Int,
                     item: CustomMessage?
                 ) {
-                    holder.viewBinding.tv1.paint.isUnderlineText = true
                 }
 
             })

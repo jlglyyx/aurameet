@@ -4,27 +4,32 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    app:shape_solidColor="@color/color_36343A"
     app:shape_radius="@dimen/dp_12"
     android:gravity="center"
     android:layout_marginStart="@dimen/dp_12"
     android:id="@+id/sll_container"
+    app:shape_strokeSize="@dimen/dp_1_5"
+    app:shape_strokeColor="@color/color_4F4C46"
+    app:shape_solidSelectedColor="#30D4851F"
     android:layout_height="wrap_content">
 
     <com.chat.jolt.widget.TimeTextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Best Offer"
         android:textStyle="bold"
         android:id="@+id/tv_save"
         android:gravity="center"
+        android:layout_gravity="start"
         app:shape_solidColor="@color/color_666666"
-        app:shape_radiusInTopLeft="@dimen/dp_12"
-        app:shape_radiusInTopRight="@dimen/dp_12"
-        android:fontFamily="@font/arial_black"
-        android:paddingVertical="@dimen/dp_8"
+        app:shape_radiusInTopLeft="@dimen/dp_16"
+        app:shape_radiusInBottomRight="@dimen/dp_16"
+        android:paddingVertical="@dimen/dp_6"
+        android:paddingHorizontal="@dimen/dp_8"
         android:textColor="@color/white"
-        android:textSize="@dimen/sp_13"
+        app:shape_solidGradientStartColor="@color/color_FFBB00"
+        app:shape_solidGradientEndColor="@color/color_FAF8C7"
+        android:textSize="@dimen/sp_11"
         />
 
     <com.hjq.shape.layout.ShapeLinearLayout
@@ -34,7 +39,6 @@
         android:paddingTop="@dimen/dp_12"
         android:paddingBottom="@dimen/dp_19"
         android:layout_margin="@dimen/dp_2"
-        app:shape_solidColor="@color/color_36343A"
         app:shape_radiusInBottomLeft="@dimen/dp_10"
         app:shape_radiusInBottomRight="@dimen/dp_10"
         android:gravity="center">
@@ -44,8 +48,9 @@
             android:layout_height="wrap_content"
             tools:text="1 Months"
             android:id="@+id/tv_name"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_14"
+            android:textStyle="bold"
+            android:textColor="@color/color_FEFDC4"
+            android:textSize="@dimen/sp_15"
             />
 
         <TextView
@@ -55,7 +60,7 @@
             android:id="@+id/tv_price"
             android:layout_marginVertical="@dimen/dp_8"
             android:textColor="@color/white"
-            android:textSize="@dimen/sp_18"
+            android:textSize="@dimen/sp_20"
             />
 
         <TextView
@@ -63,7 +68,7 @@
             android:layout_height="wrap_content"
             tools:text="0"
             android:id="@+id/tv_content"
-            android:textColor="@color/color_999999"
+            android:textColor="@color/color_A3A09A"
             android:textSize="@dimen/sp_14"
             />
 

@@ -200,6 +200,11 @@
     <color name="color_251126">#251126</color>
     <color name="color_EEEEEE">#EEEEEE</color>
     <color name="color_F8BB4D">#F8BB4D</color>
+    <color name="color_FFE1CB">#FFE1CB</color>
+    <color name="color_BEBCBA">#BEBCBA</color>
+    <color name="color_4F4C46">#4F4C46</color>
+    <color name="color_A3A09A">#A3A09A</color>
+    <color name="color_1D1D1D">#1D1D1D</color>
 
     <color name="firstTextColor">@color/color_151515</color>
     <color name="startGradientColor">@color/color_FFFFB0</color>

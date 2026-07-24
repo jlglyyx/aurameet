@@ -11,7 +11,7 @@
     android:textColor="@color/white"
     android:textSize="@dimen/sp_18"
     app:shape_radius="@dimen/dp_10"
-    app:shape_solidDisabledColor="@color/color_button"
+    app:shape_solidDisabledColor="@color/color_FDDBFF"
     app:shape_solidColor="@color/white_20"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto" />
