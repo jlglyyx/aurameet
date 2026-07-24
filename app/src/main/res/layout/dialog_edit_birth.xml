@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:shape_radiusInTopLeft="@dimen/dp_20"
-    app:shape_radiusInTopRight="@dimen/dp_20"
-    android:orientation="vertical"
-    android:gravity="center"
-    app:shape_solidColor="@color/color_222222">
-
+    android:background="@drawable/iv_bt_d_bg">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,90 +12,82 @@
         android:paddingHorizontal="@dimen/dp_25"
         android:paddingVertical="@dimen/dp_22">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/arial_black"
-        android:text="Date of Birth"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_20"
-        android:textStyle="bold" />
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date of Birth"
+            android:textSize="@dimen/sp_22"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shape_textEndColor="@color/endGradientColor"
+            app:shape_textStartColor="@color/startGradientColor" />
 
-    <TextView
-        android:id="@+id/tv_age"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_20"
-        android:text="You're 0"
-        android:gravity="center"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title"
-        android:textColor="@color/color_EAA82B"
-        android:textSize="@dimen/sp_16" />
-
-    <LinearLayout
-        app:layout_constraintTop_toBottomOf="@+id/tv_age"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:layout_marginTop="@dimen/dp_20"
-        android:id="@+id/ll_birth"
-        android:gravity="center">
-
-        <com.chat.lib_common.widget.TimePickView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:id="@+id/mTimePickView"
-            android:layout_height="match_parent" />
-
-    </LinearLayout>
+        <TextView
+            android:id="@+id/tv_age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:text="You're 0"
+            android:textColor="@color/color_FDDBFF"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
 
 
+        <com.hjq.shape.view.ShapeView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            app:layout_constraintTop_toTopOf="@+id/ll_birth"
+            app:layout_constraintBottom_toBottomOf="@+id/ll_birth"
+            app:shape_radius="@dimen/dp_16"
+            android:id="@+id/sv_bg"
+            app:shape_solidColor="@color/color_FDDBFF"
+            />
 
-    <com.hjq.shape.view.ShapeTextView
-        android:id="@+id/tv_cancel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dp_20"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:layout_marginTop="@dimen/dp_20"
-        android:paddingVertical="@dimen/dp_14"
-        android:text="Cancel"
-        app:layout_constraintTop_toBottomOf="@+id/ll_birth"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/tv_commit"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_16"
-        app:shape_radius="@dimen/dp_25"
-        app:shape_strokeColor="@color/white"
-        app:shape_strokeSize="@dimen/dp_2" />
+        <LinearLayout
+            android:id="@+id/ll_birth"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_age">
 
-    <com.hjq.shape.view.ShapeTextView
-        android:id="@+id/tv_commit"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:enabled="false"
-        app:shape_solidDisabledColor="@color/color_C5C5C5"
-        android:gravity="center"
-        android:paddingVertical="@dimen/dp_14"
-        android:text="Update"
-        android:textColor="@color/white"
-        android:textSize="@dimen/sp_16"
-        app:shape_radius="@dimen/dp_25"
-        app:layout_constraintTop_toTopOf="@+id/tv_cancel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tv_cancel"
-        app:shape_solidColor="@color/color_EAA82B"
-        app:shape_solidPressedColor="@color/pressed_color_dark" />
+            <com.chat.lib_common.widget.TimePickView
+                android:id="@+id/mTimePickView"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+        <com.hjq.shape.view.ShapeTextView
+            android:id="@+id/tv_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_25"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_20"
+            android:text="Save"
+            android:textColor="@color/firstTextColor"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_birth"
+            app:shape_radius="@dimen/dp_29"
+            app:shape_solidGradientEndColor="@color/endGradientColor"
+            app:shape_solidGradientStartColor="@color/startGradientColor"
+            app:shape_solidPressedColor="@color/pressed_color_light" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</com.hjq.shape.layout.ShapeConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

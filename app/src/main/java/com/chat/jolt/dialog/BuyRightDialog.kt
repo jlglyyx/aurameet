@@ -61,8 +61,8 @@ class BuyRightDialog : BaseDialog<DialogBuyRightBinding>(DialogBuyRightBinding::
 
     private var imageMap = mutableMapOf(
         AppConstant.Constant.PAY_FLASH_CHAT to R.drawable.iv_buy_flash_chat,
-        AppConstant.Constant.PAY_PRIVATE_PHOTO to R.drawable.iv_vip_private_photo_,
-        AppConstant.Constant.PAY_PRIVATE_VIDEO to R.drawable.iv_vip_private_video_,
+        AppConstant.Constant.PAY_PRIVATE_PHOTO to R.drawable.iv_buy_pp,
+        AppConstant.Constant.PAY_PRIVATE_VIDEO to R.drawable.iv_buy_pp,
     )
 
     private var currentImage = R.drawable.iv_buy_flash_chat

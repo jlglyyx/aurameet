@@ -43,6 +43,12 @@ class BuyRightSuccessDialog: BaseDialog<DialogBuyRightSuccessBinding>(DialogBuyR
 
             root.edgeToEdgeBottom()
 
+            ivClose.click {
+
+                dismissAllowingStateLoss()
+            }
+
+
             stvConfirm.click {
 
                 dismissAllowingStateLoss()
@@ -75,19 +81,15 @@ class BuyRightSuccessDialog: BaseDialog<DialogBuyRightSuccessBinding>(DialogBuyR
 
                     AppConstant.Constant.PAY_VIP -> {
                         tvContent.text = "Hi, tiger! it will take 1-5 minutes for your benefits to becredited, thanks for your patience."
-                        ivType.setImageResource(R.drawable.iv_buy_vip)
                     }
                     AppConstant.Constant.PAY_FLASH_CHAT -> {
                         tvContent.text = "You've received ${it.count} FlashChat opportunities."
-                        ivType.setImageResource(R.drawable.iv_buy_flash_chat)
                     }
                     AppConstant.Constant.PAY_PRIVATE_PHOTO -> {
                         tvContent.text = "You've received ${it.count} PrivatePhoto opportunities."
-                        ivType.setImageResource(R.drawable.iv_vip_private_photo_)
                     }
                     AppConstant.Constant.PAY_PRIVATE_VIDEO -> {
                         tvContent.text = "You've received ${it.count} PrivateVideo opportunities."
-                        ivType.setImageResource(R.drawable.iv_vip_private_video_)
                     }
                 }
 

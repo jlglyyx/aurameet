@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hjq.shape.layout.ShapeConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center"
-    android:orientation="vertical"
-    app:shape_radiusInTopLeft="@dimen/dp_20"
-    app:shape_radiusInTopRight="@dimen/dp_20"
-    app:shape_solidColor="@color/color_222222">
+    android:background="@drawable/iv_bt_d_bg"
+  >
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -31,25 +28,27 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
+
         <com.hjq.shape.view.ShapeTextView
             android:id="@+id/tv_save"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/dp_10"
-            android:gravity="center"
             android:enabled="false"
-            app:shape_solidDisabledColor="@color/color_C5C5C5"
-            android:paddingHorizontal="@dimen/dp_10"
-            android:paddingVertical="@dimen/dp_2"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dp_16"
+            android:paddingVertical="@dimen/dp_6"
             android:text="Save"
-            android:textColor="@color/white"
-            android:textSize="@dimen/sp_14"
+            android:textColor="@color/firstTextColor"
+            android:textSize="@dimen/dp_16"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/tv_title"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_title"
-            app:shape_radius="@dimen/dp_12"
-            app:shape_solidColor="@color/color_button"
-            app:shape_solidPressedColor="@color/pressed_color_light" />
+            app:shape_radius="@dimen/dp_30"
+            app:shape_solidColor="@color/white"
+            app:shape_solidDisabledColor="@color/color_C5C5C5"
+            app:shape_solidPressedColor="@color/pressed_color_dark"
+            app:shape_textDisabledColor="@color/white" />
 
 
         <ImageView
@@ -91,18 +90,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dp_25"
             android:gravity="center"
-            android:paddingVertical="@dimen/dp_17"
+            android:paddingVertical="@dimen/dp_20"
             android:text="Edit"
-            android:textColor="@color/white"
             android:textSize="@dimen/sp_18"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_image"
             app:shape_radius="@dimen/dp_29"
-            app:shape_solidColor="@color/color_button"
+            android:textStyle="bold"
+            app:shape_solidGradientStartColor="@color/startGradientColor"
+            app:shape_solidGradientEndColor="@color/endGradientColor"
+            android:textColor="@color/firstTextColor"
             app:shape_solidPressedColor="@color/pressed_color_light" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-</com.hjq.shape.layout.ShapeConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

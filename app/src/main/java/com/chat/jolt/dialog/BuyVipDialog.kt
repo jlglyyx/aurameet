@@ -42,6 +42,7 @@ import com.chat.lib_common.util.edgeToEdgeAll
 import com.chat.lib_common.util.formatProductDayPrice
 import com.chat.lib_common.util.fromJson
 import com.chat.lib_common.util.getScreenPx
+import com.chat.lib_common.util.loadImage
 import com.chat.lib_common.util.startActivity
 import com.chat.lib_common.util.toJson
 import kotlinx.coroutines.Dispatchers
@@ -127,6 +128,12 @@ class BuyVipDialog : BaseDialog<DialogBuyVipBinding>(DialogBuyVipBinding::inflat
             llContainer.edgeToEdgeAll()
 
 
+            tvName.text = "${UserInfoHold.userInfo?.nickname}"
+
+            tvId.text = "ID:${UserInfoHold.userInfo?.userId}"
+
+            sivAvatar.loadImage(sivAvatar.context,UserInfoHold.userInfo?.headPic)
+
             if (UserInfoHold.isVip) {
 
                 tvTime.visibility = View.VISIBLE
@@ -149,21 +156,21 @@ class BuyVipDialog : BaseDialog<DialogBuyVipBinding>(DialogBuyVipBinding::inflat
                 tvCancel.visibility = View.VISIBLE
             }
 
-
             SpanUtils.with(tvPrivacy)
-                .append("Terms of Service")
-                .setClickSpan(requireContext().getColor(R.color.color_999999), true) {
+                .append("View our ")
+                .append("User Terms")
+                .setClickSpan(requireContext().getColor(R.color.white), true) {
                     requireContext().createIntent(WebActivity::class.java)
                         .putExtra(
                             AppConstant.Constant.URL,
                             AppConstant.ClientInfo.BASE_SERVICE_POLICY_URL
                         )
-                        .putExtra(AppConstant.Constant.TITLE, "User Agreement")
+                        .putExtra(AppConstant.Constant.TITLE, "User Terms")
                         .startActivity(requireContext())
                 }
-                .append("  &  ")
+                .append(" and ")
                 .append("Privacy Policy.")
-                .setClickSpan(requireContext().getColor(R.color.color_999999), true) {
+                .setClickSpan(requireContext().getColor(R.color.white), true) {
                     requireContext().createIntent(WebActivity::class.java)
                         .putExtra(
                             AppConstant.Constant.URL,
@@ -315,19 +322,21 @@ class BuyVipDialog : BaseDialog<DialogBuyVipBinding>(DialogBuyVipBinding::inflat
 
                     val formatProductDayPrice = formatProductDayPrice(item.formatMoney, item.count)
 
+                    sllContainer.isSelected = item.isSelect
+
                     tvContent.text =
                         if (null == item.formatMoney || null == formatProductDayPrice) "$${item.dayMoney}/day" else "$formatProductDayPrice/day"
 
                     if (item.isSelect) {
-                        sllContainer.shapeDrawableBuilder.setSolidColor(requireContext().getColor(R.color.color_EAA82B))
+                        sllContainer.shapeDrawableBuilder.setStrokeGradientColors(requireContext().getColor(R.color.color_FFBB00)
+                        ,requireContext().getColor(R.color.color_FAF8C7))
+                            .setStrokeSize(6)
                             .intoBackground()
-                        tvSave.shapeDrawableBuilder.setSolidColor(requireContext().getColor(R.color.color_EAA82B))
-                            .intoBackground()
+
                     } else {
-                        sllContainer.shapeDrawableBuilder.setSolidColor(requireContext().getColor(R.color.color_36343A))
-                            .intoBackground()
-                        tvSave.shapeDrawableBuilder.setSolidColor(requireContext().getColor(R.color.color_666666))
-                            .intoBackground()
+                        sllContainer.shapeDrawableBuilder.setStrokeGradientColors(requireContext().getColor(R.color.color_4F4C46)
+                            ,requireContext().getColor(R.color.color_4F4C46)).setStrokeSize(3).intoBackground()
+
                     }
 
                 }
@@ -434,7 +443,9 @@ class BuyVipDialog : BaseDialog<DialogBuyVipBinding>(DialogBuyVipBinding::inflat
 
         mDialogBinding.privilegeRecyclerView.adapter = mPrivilegeAdapter
 
-        mDialogBinding.privilegeRecyclerView.layoutManager = LinearLayoutManager(context)
+//        mDialogBinding.privilegeRecyclerView.layoutManager = LinearLayoutManager(context)
+
+        mDialogBinding.privilegeRecyclerView.layoutManager = GridLayoutManager(context,3,RecyclerView.HORIZONTAL,false)
 
         mPrivilegeAdapter.submitList(list)
 

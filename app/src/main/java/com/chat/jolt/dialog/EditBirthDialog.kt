@@ -70,10 +70,6 @@ class EditBirthDialog : BaseDialog<DialogEditBirthBinding>(DialogEditBirthBindin
                 tvCommit.isEnabled = mCurrentDate?.dateFormat("yyyy.MM.dd") != mStartDate?.dateFormat("yyyy.MM.dd")
             }
 
-            tvCancel.click {
-
-                dismissAllowingStateLoss()
-            }
 
             tvCommit.click {
 

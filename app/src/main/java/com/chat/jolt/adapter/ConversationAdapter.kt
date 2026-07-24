@@ -49,7 +49,6 @@ class ConversationAdapter :
                 itemView.stvMessageCount.visibility =
                     if (unreadMessageCount == 0) View.GONE else View.VISIBLE
                 itemView.stvMessageRed.visibility = View.GONE
-                itemView.tvPin.text = if (isTop) "Unpin" else "Pin"
                 itemView.llPin.setBackgroundResource(if (isTop) R.color.color_999999 else R.color.color_1DAA61)
                 itemView.ivPin.setImageResource(if (isTop) R.drawable.iv_un_pin else R.drawable.iv_pin)
                 itemView.ivPinTag.visibility = if (isTop) View.VISIBLE else View.GONE

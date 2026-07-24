@@ -30,7 +30,7 @@
         android:layout_marginTop="-20dp"
         android:paddingVertical="@dimen/dp_3"
         android:paddingHorizontal="@dimen/dp_6"
-        app:shape_solidColor="@color/color_E70614"
+        app:shape_solidColor="@color/color_6F009B"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_image"/>
